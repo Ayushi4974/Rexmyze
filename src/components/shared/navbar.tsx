@@ -1,10 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import { Phone, Mail, ChevronRight } from "lucide-react";
+import { Phone, Mail, ChevronRight, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Courses", href: "/courses" },
+    { name: "Resources", href: "/resources" },
+    { name: "Startup Incubator", href: "/startup-incubator" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   return (
     <div className="flex flex-col w-full sticky top-0 z-50">
-      {/* Top Header Bar */}
+      {/* Top Header Bar - Optimized for mobile */}
       <div className="bg-primary text-white py-2 hidden sm:block">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-[13px] font-medium">
           <div className="flex items-center gap-6">
@@ -14,7 +27,7 @@ export default function Navbar() {
             </a>
             <a href="mailto:info@rexmyze.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
               <Mail size={14} className="fill-current" />
-              info@rexmyze.com
+              <span className="hidden md:inline">info@rexmyze.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
@@ -29,30 +42,85 @@ export default function Navbar() {
       <nav className="w-full border-b border-border bg-white/95 dark:bg-black/95 backdrop-blur-md">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <Link href="/" className="text-2xl font-black tracking-tight flex items-center">
+            <Link href="/" className="text-xl sm:text-2xl font-black tracking-tight flex items-center">
                <span className="bg-primary text-white px-2 py-0.5 rounded-sm mr-1">REX</span>
                <span className="text-foreground">MYZE</span>
             </Link>
           </div>
           
           <div className="hidden lg:flex items-center gap-10">
-            <Link href="/courses" className="text-[15px] font-bold text-foreground/80 hover:text-primary transition-colors">Courses</Link>
-            <Link href="/resources" className="text-[15px] font-bold text-foreground/80 hover:text-primary transition-colors">Resources</Link>
-            <Link href="/startup-incubator" className="text-[15px] font-bold text-foreground/80 hover:text-primary transition-colors">Startup Incubator</Link>
-            <Link href="/contact" className="text-[15px] font-bold text-foreground/80 hover:text-primary transition-colors">Contact</Link>
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href}
+                href={link.href} 
+                className="text-[14px] xl:text-[15px] font-bold text-foreground/80 hover:text-primary transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
 
           <div className="flex items-center gap-4">
             <Link href="/book-demo" className="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-6 py-2.5 text-[14px] font-bold text-white transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
-              Get Demo Lecture
+              Get Demo
               <ChevronRight size={16} className="ml-1" />
             </Link>
-            <button className="lg:hidden p-2 text-muted-foreground" aria-label="Menu">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            <button 
+              className="lg:hidden p-2 text-foreground hover:bg-muted rounded-md transition-colors" 
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden w-full bg-white dark:bg-black border-b border-border overflow-hidden absolute top-[calc(100%-1px)] left-0 z-40 shadow-xl"
+          >
+            <div className="flex flex-col p-6 space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-lg font-bold text-foreground/80 hover:text-primary transition-colors py-2 border-b border-border/50"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <div className="pt-4 flex flex-col gap-4">
+                <Link 
+                  href="/book-demo" 
+                  className="flex items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-bold text-white transition-all"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Demo Lecture
+                  <ChevronRight size={18} className="ml-2" />
+                </Link>
+                <div className="flex flex-col gap-3 pt-4 text-sm text-muted-foreground font-medium">
+                  <a href="tel:+917567154257" className="flex items-center gap-3">
+                    <Phone size={16} className="text-primary" />
+                    +91-7567154257
+                  </a>
+                  <a href="mailto:info@rexmyze.com" className="flex items-center gap-3">
+                    <Mail size={16} className="text-primary" />
+                    info@rexmyze.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
+

@@ -19,11 +19,11 @@ export default function StartupIncubatorPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-primary mb-10">
                Entrepreneurship Program
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-10 leading-[0.95]">
-               Rexmyze <span className="highlight-red">Incubator</span> <br />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-8 sm:mb-10 leading-[0.95]">
+               Rexmyze <span className="highlight-red">Incubator</span> <br className="hidden sm:block" />
                From Idea to Exit
             </h1>
-            <p className="text-xl text-background/60 mb-14 max-w-xl mx-auto font-medium italic border-l-4 border-primary pl-8 ml-auto mr-auto">
+            <p className="text-lg sm:text-xl text-background/60 mb-10 sm:mb-14 max-w-xl mx-auto font-medium italic border-l-4 border-primary pl-6 sm:pl-8 ml-auto mr-auto">
                Ahmedabad's #1 digital marketing institute is now empowering 
                founders to build, scale, and fund their startups.
             </p>
@@ -56,8 +56,8 @@ export default function StartupIncubatorPage() {
       {/* Registration / Join Section */}
       <section className="py-24 border-t border-border bg-muted/20">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-               <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden border-[12px] border-primary shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-20 items-center">
+               <div className="relative aspect-4/3 rounded-3xl sm:rounded-4xl overflow-hidden border-6 sm:border-[12px] border-primary shadow-2xl">
                   <Image
                     src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1000&auto=format&fit=crop"
                     alt="Pitch Session"

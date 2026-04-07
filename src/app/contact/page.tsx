@@ -28,14 +28,14 @@ export default function ContactPage() {
     <div className="flex flex-col w-full overflow-x-hidden pt-10">
       {/* Contact Hero */}
       <section className="py-24 bg-foreground text-background relative overflow-hidden">
-         <div className="absolute top-0 left-0 -z-0 opacity-10 -translate-x-1/4 -translate-y-1/4">
+         <div className="absolute top-0 left-0 z-0 opacity-10 -translate-x-1/4 -translate-y-1/4">
             <Globe size={600} />
          </div>
          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-8">
                Get in <span className="highlight-red">Touch</span> With Us
             </h1>
-            <p className="text-lg md:text-xl opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-6 ml-auto mr-auto">
+            <p className="text-base sm:text-lg md:text-xl opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-6 ml-auto mr-auto">
                Have questions about our AI-powered courses or need career guidance? 
                Our expert team is here to help you 24/7.
             </p>
@@ -50,23 +50,23 @@ export default function ContactPage() {
               {/* Branch Information */}
               <div className="lg:col-span-12">
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    {branches.map((branch, i) => (
-                      <div key={i} className="bg-card border-b-8 border-primary border border-border p-10 transition-all hover:shadow-2xl group">
+                     {branches.map((branch, i) => (
+                      <div key={i} className="bg-card border-b-8 border-b-primary border border-border p-8 sm:p-10 transition-all hover:shadow-2xl group">
                          <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all">
                             <MapPin size={24} />
                          </div>
-                         <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">{branch.city}</h3>
-                         <div className="space-y-6 text-sm font-medium text-muted-foreground italic">
+                         <h3 className="text-xl sm:text-2xl font-black mb-4 sm:mb-6 uppercase tracking-tight">{branch.city}</h3>
+                         <div className="space-y-4 sm:space-y-6 text-sm font-medium text-muted-foreground italic">
                             <p className="flex items-start gap-3 leading-relaxed">
-                               <MapPin size={18} className="mt-1 text-primary flex-shrink-0" />
+                               <MapPin size={18} className="mt-1 text-primary shrink-0" />
                                {branch.address}
                             </p>
                             <p className="flex items-center gap-3">
-                               <Phone size={18} className="text-primary flex-shrink-0" />
+                               <Phone size={18} className="text-primary shrink-0" />
                                {branch.phone}
                             </p>
                             <p className="flex items-center gap-3">
-                               <Mail size={18} className="text-primary flex-shrink-0" />
+                               <Mail size={18} className="text-primary shrink-0" />
                                {branch.email}
                             </p>
                          </div>
@@ -77,8 +77,8 @@ export default function ContactPage() {
 
               {/* Contact Form */}
               <div className="lg:col-span-7">
-                 <div className="bg-card border-[10px] border-primary p-10 md:p-16 rounded-[3rem] shadow-2xl relative">
-                    <h2 className="text-4xl font-black mb-10 uppercase tracking-tighter">Send Us a <span className="text-primary italic underline underline-offset-8">Message</span></h2>
+                 <div className="bg-card border-6 sm:border-10 border-primary p-6 sm:p-10 md:p-16 rounded-3xl sm:rounded-4xl shadow-2xl relative">
+                    <h2 className="text-2xl sm:text-4xl font-black mb-8 sm:mb-10 uppercase tracking-tighter">Send Us a <span className="text-primary italic underline underline-offset-8">Message</span></h2>
                     <form className="space-y-8">
                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                           <div className="space-y-3">
@@ -111,21 +111,21 @@ export default function ContactPage() {
                           <textarea placeholder="Describe your inquiry..." rows={5} className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all resize-none" />
                        </div>
 
-                       <Button size="lg" className="w-full py-10 text-xl font-black uppercase tracking-widest rounded-xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30 active:scale-[0.98] transition-all">
-                          Send Message Now
+                       <Button size="lg" className="w-full py-6 sm:py-10 text-lg sm:text-xl font-black uppercase tracking-widest rounded-xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30 active:scale-[0.98] transition-all">
+                          Send Message
                           <ChevronRight size={24} className="ml-2" />
                        </Button>
                     </form>
                  </div>
               </div>
 
-              {/* Sidebar Info */}
+               {/* Sidebar Info */}
               <div className="lg:col-span-5 space-y-10">
-                 <div className="bg-foreground text-background p-12 rounded-[3rem] border-r-[12px] border-primary shadow-2xl">
-                    <h3 className="text-2xl font-black mb-10 uppercase tracking-tight">Why Choose <span className="text-primary italic underline underline-offset-4">Rexmyze?</span></h3>
-                    <div className="space-y-8 italic font-medium">
+                 <div className="bg-foreground text-background p-8 sm:p-12 rounded-3xl sm:rounded-4xl border-r-8 sm:border-r-12 border-r-primary shadow-2xl">
+                    <h3 className="text-xl sm:text-2xl font-black mb-10 uppercase tracking-tight">Why Choose <span className="text-primary italic underline underline-offset-4">Rexmyze?</span></h3>
+                    <div className="space-y-6 sm:space-y-8 italic font-medium">
                        <div className="flex gap-6 group">
-                          <div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center text-primary flex-shrink-0 group-hover:scale-110 transition-transform">
+                          <div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
                              <MessageSquare size={22} />
                           </div>
                           <div>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                           </div>
                        </div>
                        <div className="flex gap-6 group">
-                          <div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center text-primary flex-shrink-0 group-hover:scale-110 transition-transform">
+                          <div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
                              <Clock size={22} />
                           </div>
                           <div>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                           </div>
                        </div>
                        <div className="flex gap-6 group">
-                          <div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center text-primary flex-shrink-0 group-hover:scale-110 transition-transform">
+                          <div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
                              <Award size={22} />
                           </div>
                           <div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                  </div>
 
                  {/* Mock Map Placeholder */}
-                 <div className="relative aspect-video rounded-[3rem] overflow-hidden border-[6px] border-primary shadow-2xl group">
+                 <div className="relative aspect-video rounded-3xl sm:rounded-4xl overflow-hidden border-4 sm:border-6 border-primary shadow-2xl group">
                     <Image
                       src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1000&auto=format&fit=crop"
                       alt="Google Map Placeholder"
