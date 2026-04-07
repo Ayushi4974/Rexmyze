@@ -17,9 +17,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Rexmyze | Ahmedabad's No.1 Premium AI Powered Digital Marketing Institute",
-  description: "Master AI-powered digital marketing with Rexmyze. 100% placement assistance, live projects, and hands-on training in SEO, Google Ads, SMM, and more in Ahmedabad.",
-  keywords: ["digital marketing course ahmedabad", "AI marketing training", "SEO course", "Google Ads certification", "social media marketing training"],
+  title: "Home - Rexmyze Academy - Digital Marketing Institute (Maninagar)",
+  description: "Enroll in the Best Digital Marketing Institute in Ahmedabad at Rexmyze Academy. Get practical training in Digital Marketing Course in Ahmedabad with SEO, Google Ads, and AI tools.",
+  keywords: ["digital marketing course ahmedabad", "digital marketing institute maninagar", "SEO training ahmedabad", "Google Ads course", "social media marketing maninagar"],
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-background text-foreground flex flex-col min-h-screen">
         <Navbar />
         <StickyInquiry />
-        <main className="flex-grow">
+        <main className="grow">
           {children}
         </main>
         <Footer />

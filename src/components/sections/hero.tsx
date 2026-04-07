@@ -26,19 +26,18 @@ export default function Hero() {
           {/* Hero Content */}
           <div className="lg:col-span-7 flex flex-col items-start pt-10">
             <div className="flex flex-wrap items-center gap-4 text-primary font-bold text-xs uppercase tracking-tighter mb-6">
-              Ahmedabad's <span className="bg-primary text-white px-2 py-0.5 rounded-sm">No.1</span> Premium Digital Agency Base Training
+              Ahmedabad's <span className="bg-primary text-white px-2 py-0.5 rounded-sm">No.1</span> AI-Based Digital Marketing Institute (Maninagar)
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6 sm:mb-8">
-              Ahmedabad's <span className="bg-primary text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-sm">No.1</span> <br className="hidden sm:block" />
-              <span className="text-primary italic">Premium</span> <br className="hidden sm:block" />
-              Digital Marketing Institute
+              Welcome to <span className="text-primary italic">Rexmyze Academy</span> <br className="hidden sm:block" />
+              Digital Marketing Institute <span className="bg-primary text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-sm">Maninagar</span>
             </h1>
 
             <p className="text-muted-foreground text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl leading-relaxed font-medium">
-              Now Get Placed in Just 2 Months With the help of our 3 Levels of
-              Teaching Methodology (Basics to Practical to Strategic). Transform
-              your Digital Journey With Rexmyze Special Programs.
+              Transform your career with hands-on Digital Marketing Course in Ahmedabad at Rexmyze Academy. 
+              Led by experts with 5+ years of experience, we offer SEO-friendly training focused on 
+              real-world skills like SEO, Google Ads, Meta Ads, and AI-powered lead generation through live projects.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8 sm:mb-12 w-full sm:w-auto">
@@ -49,10 +48,10 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-3 font-black text-[10px] sm:text-[11px] uppercase tracking-wider text-foreground/80 mb-8 sm:mb-12">
-              <span className="flex items-center gap-2 tracking-tighter">TAIYARI INTERNSHIP KI <Star size={12} className="text-primary fill-current" /></span>
-              <span className="flex items-center gap-2 tracking-tighter">TAIYARI JOB KI <Star size={12} className="text-primary fill-current" /></span>
-              <span className="flex items-center gap-2 tracking-tighter">TAIYARI STARTUP KI <Star size={12} className="text-primary fill-current" /></span>
-              <span className="flex items-center gap-2 tracking-tighter">TAIYARI 10X BUSINESS KI <Star size={12} className="text-primary fill-current" /></span>
+              <span className="flex items-center gap-2 tracking-tighter">LEARN PRACTICAL <Star size={12} className="text-primary fill-current" /></span>
+              <span className="flex items-center gap-2 tracking-tighter">AI POWERED SKILLS <Star size={12} className="text-primary fill-current" /></span>
+              <span className="flex items-center gap-2 tracking-tighter">100% PLACEMENT <Star size={12} className="text-primary fill-current" /></span>
+              <span className="flex items-center gap-2 tracking-tighter">LIVE PROJECTS <Star size={12} className="text-primary fill-current" /></span>
             </div>
           </div>
 

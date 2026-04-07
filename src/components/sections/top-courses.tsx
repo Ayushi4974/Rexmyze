@@ -6,31 +6,31 @@ import { ChevronRight } from "lucide-react";
 export default function TopCourses() {
   const topCourses = [
     {
-      title: "Advanced AI Digital Marketing",
-      description: "Master the 45+ modules of digital marketing with a focus on AI tools and strategies.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
-      duration: "6 Months",
-      modules: "45+",
-      slug: "advanced-ai-digital-marketing",
-      category: "Full Stack",
-    },
-    {
-      title: "SEO Masterclass",
-      description: "Learn Search Engine Optimization from scratch to expert level with live projects.",
+      title: "SEO & Google Ads",
+      description: "Master search engine optimization and paid ads to drive results for any business.",
       image: "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000&auto=format&fit=crop",
       duration: "2 Months",
       modules: "12",
-      slug: "seo-masterclass",
-      category: "Specialized",
+      slug: "seo-google-ads",
+      category: "Performance",
     },
     {
-      title: "Google Ads Certification",
-      description: "Get certified in Google Ads and learn how to manage multi-million budgets.",
+      title: "Meta Ads & Social Media",
+      description: "Create high-converting Facebook and Instagram campaigns to fuel brand growth.",
       image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1000&auto=format&fit=crop",
       duration: "2 Months",
       modules: "10+",
-      slug: "google-ads",
-      category: "Advertising",
+      slug: "social-media-marketing",
+      category: "Social",
+    },
+    {
+      title: "AI-Based Marketing",
+      description: "Learn to use cutting-edge AI tools for modern and efficient marketing strategies.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+      duration: "2 Months",
+      modules: "15+",
+      slug: "ai-marketing",
+      category: "Modern",
     },
   ];
 

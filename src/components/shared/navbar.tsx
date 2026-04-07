@@ -9,9 +9,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
     { name: "Courses", href: "/courses" },
     { name: "Resources", href: "/resources" },
-    { name: "Startup Incubator", href: "/startup-incubator" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -21,9 +23,9 @@ export default function Navbar() {
       <div className="bg-primary text-white py-2 hidden sm:block">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-[13px] font-medium">
           <div className="flex items-center gap-6">
-            <a href="tel:+917567154257" className="flex items-center gap-2 hover:text-white/80 transition-colors">
+            <a href="tel:7096181126" className="flex items-center gap-2 hover:text-white/80 transition-colors">
               <Phone size={14} className="fill-current" />
-              +91-7567154257
+              7096181126
             </a>
             <a href="mailto:info@rexmyze.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
               <Mail size={14} className="fill-current" />
@@ -42,9 +44,12 @@ export default function Navbar() {
       <nav className="w-full border-b border-border bg-white/95 dark:bg-black/95 backdrop-blur-md">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <Link href="/" className="text-xl sm:text-2xl font-black tracking-tight flex items-center">
-               <span className="bg-primary text-white px-2 py-0.5 rounded-sm mr-1">REX</span>
-               <span className="text-foreground">MYZE</span>
+            <Link href="/" className="text-xl sm:text-2xl font-black tracking-tight flex items-center group">
+               <span className="bg-primary text-white px-2 py-0.5 rounded-sm mr-1.5 transition-transform group-hover:scale-110">REX</span>
+               <div className="flex flex-col leading-none">
+                 <span className="text-foreground text-lg sm:text-xl">MYZE</span>
+                 <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.1em] text-primary">ACADEMY</span>
+               </div>
             </Link>
           </div>
           
@@ -106,9 +111,9 @@ export default function Navbar() {
                   <ChevronRight size={18} className="ml-2" />
                 </Link>
                 <div className="flex flex-col gap-3 pt-4 text-sm text-muted-foreground font-medium">
-                  <a href="tel:+917567154257" className="flex items-center gap-3">
+                  <a href="tel:7096181126" className="flex items-center gap-3">
                     <Phone size={16} className="text-primary" />
-                    +91-7567154257
+                    7096181126
                   </a>
                   <a href="mailto:info@rexmyze.com" className="flex items-center gap-3">
                     <Mail size={16} className="text-primary" />

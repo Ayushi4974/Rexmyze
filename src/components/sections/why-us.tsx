@@ -3,34 +3,24 @@ import { CheckCircle2, ShieldCheck, Heart, Users, Briefcase, GraduationCap } fro
 export default function WhyChooseUs() {
   const features = [
     {
-      title: "45+ Advanced Modules",
-      description: "Comprehensive curriculum covering everything from SEO to AI-powered marketing.",
-      icon: GraduationCap,
-    },
-    {
-      title: "100% Placement Assistance",
-      description: "Dedicated placement cell to help you land your dream job in top MNCs.",
-      icon: Briefcase,
-    },
-    {
-      title: "Live Project Training",
-      description: "Gain hands-on experience by working on real-world industry projects.",
-      icon: ShieldCheck,
-    },
-    {
-      title: "Expert Mentors",
-      description: "Learn from industry veterans with 10+ years of experience in digital marketing.",
+      title: "Expert Trainers",
+      description: "Industry veterans with 5+ years of experience running active digital campaigns.",
       icon: Users,
     },
     {
-      title: "International Certificates",
-      description: "Receive certifications from Rexmyze along with Google, Meta, and HubSpot.",
-      icon: CheckCircle2,
+      title: "Practical Focus",
+      description: "Live projects and real client work, not just theory. Practical hands-on training.",
+      icon: ShieldCheck,
     },
     {
-      title: "Lifetime Support",
-      description: "Get lifetime access to our community and regular updates on course modules.",
-      icon: Heart,
+      title: "Comprehensive Curriculum",
+      description: "Complete SEO, PPC, social media, and AI integration for future-ready skills.",
+      icon: GraduationCap,
+    },
+    {
+      title: "Job Support",
+      description: "Ideal for students, job seekers, and freelancers with 100% placement assistance.",
+      icon: Briefcase,
     },
   ];
 
@@ -39,7 +29,7 @@ export default function WhyChooseUs() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Why <span className="text-primary italic">Choose</span> Rexmyze?
+            Why Choose the <span className="text-primary italic">Best Digital Marketing Institute</span> in Ahmedabad?
           </h2>
           <p className="text-lg text-muted-foreground">
             We don't just teach digital marketing; we build careers. Here's why students 

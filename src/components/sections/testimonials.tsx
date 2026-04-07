@@ -3,24 +3,24 @@ import TestimonialCard from "@/components/ui/testimonial-card";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Sneha Patel",
-      role: "Digital Marketing Specialist",
-      image: "https://i.pravatar.cc/150?u=sneha",
-      content: "Rexmyze's AI-focused curriculum completely changed how I approach marketing. The practical training on live projects was invaluable for my career.",
+      name: "Saiyed Aziz",
+      role: "Digital Marketing Professional",
+      image: "https://i.pravatar.cc/150?u=aziz",
+      content: "Joining Rexmyze Academy was the best decision for my career. The practical training and AI tools integration made learning so much easier and relevant to today's industry需求.",
       rating: 5,
     },
     {
-      name: "Rahul Sharma",
-      role: "SEO Analyst",
-      image: "https://i.pravatar.cc/150?u=rahul",
-      content: "I landed my dream job at a top MNC within a month of completing the SEO masterclass. Huge thanks to the placement cell for their support!",
-      rating: 5,
-    },
-    {
-      name: "Anjali Mehta",
+      name: "Zaki Vohra",
       role: "Business Owner",
-      image: "https://i.pravatar.cc/150?u=anjali",
-      content: "As a business owner, I wanted to understand how to scale my brand online. Rexmyze gave me the tools and confidence to manage my own campaigns.",
+      image: "https://i.pravatar.cc/150?u=zaki",
+      content: "As a business owner, I needed skills to grow my brand online. The expert trainers at Rexmyze Academy provided me with exactly what I needed - clear, practical, and effective strategies.",
+      rating: 5,
+    },
+    {
+      name: "Amit Patel",
+      role: "SEO Specialist",
+      image: "https://i.pravatar.cc/150?u=amit",
+      content: "The focus on live projects at Rexmyze Agency based training helped me land a job within weeks. Highly recommended for anyone looking for real skills.",
       rating: 5,
     },
   ];
