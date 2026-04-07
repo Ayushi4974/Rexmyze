@@ -4,13 +4,13 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-background py-10 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10 sm:gap-12">
           {/* Brand Info */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 order-1 col-span-2 md:col-span-1">
             <Link href="/" className="text-2xl font-bold tracking-tight text-primary">
               REXM<span className="text-accent">YZE</span>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+            <p className="text-sm text-muted-foreground leading-relaxed md:max-w-xs">
               Ahmedabad's leading AI-powered digital marketing institute. 
               Empowering students, professionals, and business owners with 
               advanced practical training and 100% placement support.
@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 order-2 md:order-2">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Quick Links</h3>
             <div className="flex flex-col space-y-2">
               <Link href="/courses" className="text-sm text-muted-foreground hover:text-primary transition-colors">All Courses</Link>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           {/* Top Courses */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 order-3 md:order-3">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Popular Courses</h3>
             <div className="flex flex-col space-y-2">
               <Link href="/courses/seo" className="text-sm text-muted-foreground hover:text-primary transition-colors">SEO Masterclass</Link>
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 order-4 md:order-4 col-span-2 md:col-span-1">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Contact Us</h3>
             <div className="space-y-3">
               <a href="mailto:info@rexmyze.com" className="text-sm text-muted-foreground hover:text-primary transition-colors block">
