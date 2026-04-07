@@ -39,10 +39,10 @@ export default function BlogPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-primary mb-8">
                Knowledge & Insights
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-10 leading-[0.95]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-8 sm:mb-10 leading-[0.95]">
                The <span className="highlight-red">Rexmyze</span> Blog
             </h1>
-            <p className="text-xl text-muted-foreground opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-8 ml-auto mr-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-6 sm:pl-8 ml-auto mr-auto">
                Latest trends, strategies, and AI-powered insights from the leaders 
                in digital marketing training.
             </p>
@@ -86,18 +86,18 @@ export default function BlogPage() {
             </div>
 
             {/* Newsletter Subscription */}
-            <div className="mt-24 bg-foreground text-background p-12 md:p-20 rounded-[3rem] border-r-[12px] border-primary shadow-2xl relative overflow-hidden">
+            <div className="mt-16 sm:mt-24 bg-foreground text-background p-8 sm:p-12 md:p-20 rounded-3xl sm:rounded-4xl border-r-8 sm:border-r-12 border-r-primary shadow-2xl relative overflow-hidden">
                <div className="absolute top-0 left-0 opacity-10 -translate-x-1/4 -translate-y-1/4 pointer-events-none">
-                  <Zap size={400} />
+                  <Zap className="size-64 sm:size-[400px]" />
                </div>
-               <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
-                  <div className="max-w-xl">
-                     <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-6 uppercase">Get AI Strategies <span className="text-primary italic underline underline-offset-8">Weekly</span></h2>
-                     <p className="text-lg opacity-60 font-medium italic">Join 5000+ marketers receiving Ahmedabad's #1 digital marketing newsletter.</p>
+               <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
+                  <div className="max-w-xl text-center lg:text-left">
+                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter mb-4 sm:mb-6 uppercase">Get AI Strategies <span className="text-primary italic underline underline-offset-8">Weekly</span></h2>
+                     <p className="text-base sm:text-lg opacity-60 font-medium italic">Join 5000+ marketers receiving Ahmedabad's #1 digital marketing newsletter.</p>
                   </div>
-                  <div className="flex w-full lg:w-auto gap-4">
-                     <input type="email" placeholder="Your Best Email" className="bg-white/10 border-none rounded-xl px-8 py-5 text-sm font-black focus:ring-4 focus:ring-primary/20 outline-none w-full lg:w-80" />
-                     <button className="bg-primary text-white rounded-xl px-10 py-5 font-black uppercase tracking-widest text-xs hover:brightness-110 active:scale-95 shadow-xl shadow-primary/20 whitespace-nowrap">Subscribe</button>
+                  <div className="flex flex-col sm:flex-row w-full lg:w-auto gap-4">
+                     <input type="email" placeholder="Your Best Email" className="bg-white/10 border-none rounded-xl px-6 sm:px-8 py-4 sm:py-5 text-sm font-black focus:ring-4 focus:ring-primary/20 outline-none w-full lg:w-80" />
+                     <button className="bg-primary text-white rounded-xl px-8 sm:px-10 py-4 sm:py-5 font-black uppercase tracking-widest text-xs hover:brightness-110 active:scale-95 shadow-xl shadow-primary/20 whitespace-nowrap">Subscribe</button>
                   </div>
                </div>
             </div>

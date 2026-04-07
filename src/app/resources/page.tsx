@@ -35,10 +35,10 @@ export default function ResourcesPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-primary mb-8">
                Free Learning Material
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-10 leading-[0.95]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-8 sm:mb-10 leading-[0.95]">
                Digital <span className="highlight-red">Resources</span> Center
             </h1>
-            <p className="text-xl text-muted-foreground opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-8 ml-auto mr-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-6 sm:pl-8 ml-auto mr-auto">
                Download high-value eBook, checklists, and guides curated by 
                the experts at Ahmedabad's #1 digital marketing institute.
             </p>
@@ -66,7 +66,7 @@ export default function ResourcesPage() {
                        <h3 className="text-2xl font-black mb-4 tracking-tight group-hover:text-primary transition-colors leading-tight">
                           {res.title}
                        </h3>
-                       <p className="text-sm text-muted-foreground font-medium flex-grow mb-10 italic">
+                       <p className="text-sm text-muted-foreground font-medium grow mb-10 italic">
                           {res.description}
                        </p>
                        <div className="flex items-center justify-between mt-auto">
@@ -82,16 +82,16 @@ export default function ResourcesPage() {
             </div>
 
             {/* Exclusive Video Workshop Invite */}
-            <div className="mt-24 bg-foreground text-background p-12 md:p-16 rounded-3xl border-l-[12px] border-primary shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden">
+            <div className="mt-16 sm:mt-24 bg-foreground text-background p-8 sm:p-12 md:p-16 rounded-3xl border-l-8 sm:border-l-12 border-l-primary shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10 sm:gap-12 relative overflow-hidden">
                <div className="absolute right-0 top-0 opacity-10 translate-x-1/4 -translate-y-1/4 pointer-events-none">
-                  <PlayCircle size={400} />
+                  <PlayCircle className="size-64 sm:size-[400px]" />
                </div>
-               <div className="relative z-10">
-                  <h3 className="text-3xl font-black mb-4 uppercase tracking-tighter">Want more <span className="text-primary italic">Practical</span> Insights?</h3>
-                  <p className="text-lg opacity-60 font-medium italic mb-8 lg:mb-0">Join our next live workshop on AI-Powered Google Ads Strategies.</p>
+               <div className="relative z-10 text-center lg:text-left">
+                  <h3 className="text-2xl sm:text-3xl font-black mb-4 uppercase tracking-tighter">Want more <span className="text-primary italic">Practical</span> Insights?</h3>
+                  <p className="text-base sm:text-lg opacity-60 font-medium italic mb-8 lg:mb-0">Join our next live workshop on AI-Powered Google Ads Strategies.</p>
                </div>
                <div className="relative z-10 w-full lg:w-auto">
-                  <Button size="lg" className="bg-white text-primary hover:bg-muted font-black uppercase tracking-widest text-xs px-12 py-8 rounded-xl shadow-2xl">
+                  <Button size="lg" className="bg-white text-primary hover:bg-muted font-black uppercase tracking-widest text-xs px-8 sm:px-12 py-6 sm:py-8 rounded-xl shadow-2xl w-full sm:w-auto text-center justify-center">
                      Watch Demo Workshop <ChevronRight size={18} className="ml-2" />
                   </Button>
                </div>
