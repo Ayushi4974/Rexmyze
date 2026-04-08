@@ -80,7 +80,7 @@ export default function VideoEditingService() {
                 </Button>
               </div>
             </FadeIn>
-            <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
+            <FadeIn direction="left" delay={0.2} className="relative">
                <div className="relative aspect-video rounded-3xl overflow-hidden border-8 border-primary shadow-2xl">
                   <Image 
                     src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1000&auto=format&fit=crop"
@@ -89,7 +89,7 @@ export default function VideoEditingService() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
-                    <div className="h-20 w-20 bg-white rounded-full flex items-center justify-center text-primary shadow-2xl">
+                    <div className="h-16 w-16 md:h-20 md:w-20 bg-white rounded-full flex items-center justify-center text-primary shadow-2xl">
                        <Film size={32} />
                     </div>
                   </div>

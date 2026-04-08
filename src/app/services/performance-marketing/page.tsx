@@ -181,7 +181,7 @@ export default function PerformanceMarketingService() {
       {/* Reporting Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="bg-primary text-white rounded-[48px] p-12 md:p-20 relative overflow-hidden">
+           <div className="bg-primary text-white rounded-3xl md:rounded-[48px] p-8 md:p-20 relative overflow-hidden">
               <div className="absolute top-0 right-0 opacity-10 translate-x-1/4 -translate-y-1/4">
                  <PieChart size={500} />
               </div>

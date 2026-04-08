@@ -54,8 +54,8 @@ export default function ContactHero() {
             </div>
           </FadeIn>
 
-          <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-            <div className="relative aspect-square w-full max-w-[500px] ml-auto p-10">
+          <FadeIn direction="left" delay={0.2} className="relative mt-20 lg:mt-0">
+            <div className="relative aspect-square w-full max-w-[500px] mx-auto lg:ml-auto p-10">
                {/* Decorative Circles */}
                <div className="absolute inset-0 border-2 border-[#54A0D6]/20 rounded-full animate-spin-slow" />
                <div className="absolute inset-6 border border-[#54A0D6]/10 rounded-full animate-reverse-spin" />

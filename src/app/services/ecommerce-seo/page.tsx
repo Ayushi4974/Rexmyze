@@ -58,8 +58,8 @@ export default function EcommerceSEOService() {
                 </div>
               </div>
             </FadeIn>
-            <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-               <div className="relative aspect-square w-full max-w-[500px] ml-auto">
+            <FadeIn direction="left" delay={0.2} className="relative">
+               <div className="relative aspect-square w-full max-w-[500px] mx-auto lg:ml-auto">
                   <div className="absolute inset-0 bg-primary/5 rounded-full blur-[100px] -z-10" />
                   <div className="grid grid-cols-2 gap-4">
                      <div className="aspect-4/5 bg-card border-2 border-border p-6 rounded-3xl shadow-xl -rotate-6 translate-y-10 group hover:rotate-0 transition-all">

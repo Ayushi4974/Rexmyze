@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center group">
-               <div className="relative h-14 w-40">
+               <div className="relative h-12 w-32 sm:h-14 sm:w-40">
                  <Image 
                    src="/logo-academy.png" 
                    alt="Rexmyze Academy Logo" 

@@ -69,8 +69,8 @@ export default function SEOAgencyService() {
                 </Button>
               </div>
             </FadeIn>
-            <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-               <div className="relative aspect-square w-full max-w-[500px] ml-auto p-10 bg-[#54A0D6]/5 rounded-3xl border-2 border-[#54A0D6]/10 overflow-hidden">
+            <FadeIn direction="left" delay={0.2} className="relative">
+               <div className="relative aspect-square w-full max-w-[500px] mx-auto lg:ml-auto p-10 bg-[#54A0D6]/5 rounded-3xl border-2 border-[#54A0D6]/10 overflow-hidden">
                   <div className="absolute inset-0 opacity-10 flex items-center justify-center">
                     <Globe size={400} />
                   </div>

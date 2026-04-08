@@ -58,32 +58,32 @@ export default function CoursesHero() {
             </div>
           </FadeIn>
 
-          <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-            <div className="relative aspect-square w-full max-w-[550px] ml-auto">
-              {/* Decorative Frame */}
-              <div className="absolute inset-0 border-20 border-primary/10 rounded-sm translate-x-8 translate-y-8 -z-10" />
-              <div className="absolute inset-0 border-2 border-primary/20 rounded-sm translate-x-4 translate-y-4 -z-10" />
-              
-              <div className="relative h-full w-full rounded-sm overflow-hidden shadow-2xl skew-y-2 border-4 border-white">
-                <Image
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop"
-                  alt="Courses Background"
-                  fill
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-                />
-                <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
-              </div>
+          <FadeIn direction="left" delay={0.2} className="relative">
+            <div className="relative aspect-square w-full max-w-[550px] mx-auto lg:ml-auto mt-10 lg:mt-0">
+               {/* Decorative Frame */}
+               <div className="absolute inset-0 border-20 border-primary/10 rounded-sm translate-x-8 translate-y-8 -z-10 hidden sm:block" />
+               <div className="absolute inset-0 border-2 border-primary/20 rounded-sm translate-x-4 translate-y-4 -z-10 hidden sm:block" />
+               
+               <div className="relative h-full w-full rounded-sm overflow-hidden shadow-2xl sm:skew-y-2 border-4 border-white">
+                 <Image
+                   src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop"
+                   alt="Courses Background"
+                   fill
+                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                 />
+                 <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
+               </div>
 
-              {/* Floating Content Badge */}
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="absolute -bottom-6 -left-6 bg-white p-8 rounded-3xl shadow-2xl border border-border flex flex-col items-center justify-center"
-              >
-                 <span className="text-4xl font-black text-primary">15+</span>
-                 <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mt-1">Recognized Certifications</span>
-              </motion.div>
+               {/* Floating Content Badge */}
+               <motion.div 
+                 initial={{ opacity: 0, y: 30 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 transition={{ delay: 0.6 }}
+                 className="absolute -bottom-6 -left-6 bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-border flex flex-col items-center justify-center z-20"
+               >
+                  <span className="text-3xl sm:text-4xl font-black text-primary">15+</span>
+                  <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-widest text-muted-foreground mt-1">Recognized Certifications</span>
+               </motion.div>
             </div>
           </FadeIn>
 

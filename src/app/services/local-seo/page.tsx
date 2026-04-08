@@ -64,8 +64,8 @@ export default function LocalSEOService() {
                 </div>
               </div>
             </FadeIn>
-            <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-               <div className="relative aspect-square w-full max-w-[500px] ml-auto p-12 bg-white rounded-[64px] shadow-2xl border-4 border-[#54A0D6]">
+            <FadeIn direction="left" delay={0.2} className="relative">
+               <div className="relative aspect-square w-full max-w-[500px] mx-auto lg:ml-auto p-12 bg-white rounded-[64px] shadow-2xl border-4 border-[#54A0D6]">
                   <div className="absolute top-0 right-0 p-8">
                      <Star size={40} className="text-orange-400 fill-current" />
                   </div>

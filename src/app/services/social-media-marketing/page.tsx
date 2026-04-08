@@ -64,8 +64,8 @@ export default function SMMService() {
                 </Button>
               </div>
             </FadeIn>
-            <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-               <div className="relative aspect-square w-full max-w-[500px] ml-auto">
+            <FadeIn direction="left" delay={0.2} className="relative">
+               <div className="relative aspect-square w-full max-w-[500px] mx-auto lg:ml-auto">
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[100px]" />
                   <div className="relative h-full w-full grid grid-cols-2 gap-6 items-center">
                      <motion.div 

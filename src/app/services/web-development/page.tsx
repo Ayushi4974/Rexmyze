@@ -67,17 +67,17 @@ export default function WebDevelopmentService() {
                 </div>
               </div>
             </FadeIn>
-            <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-               <div className="relative aspect-video rounded-3xl overflow-hidden border-8 border-[#54A0D6] shadow-2xl skew-y-1">
+            <FadeIn direction="left" delay={0.2} className="relative">
+               <div className="relative aspect-video rounded-3xl overflow-hidden border-8 border-[#54A0D6] shadow-2xl skew-y-1 mt-10 lg:mt-0">
                   <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
-                     <div className="bg-white p-12 rounded-[40px] shadow-2xl border border-border flex flex-col items-center">
-                        <Monitor size={80} className="text-primary mb-6" />
+                     <div className="bg-white p-8 md:p-12 rounded-[32px] md:rounded-[40px] shadow-2xl border border-border flex flex-col items-center">
+                        <Monitor size={60} className="text-primary mb-4 md:mb-6" />
                         <div className="flex gap-2">
                            <div className="h-2 w-8 bg-primary rounded-full" />
                            <div className="h-2 w-4 bg-primary/20 rounded-full" />
                            <div className="h-2 w-4 bg-primary/20 rounded-full" />
                         </div>
-                        <p className="mt-6 text-xl font-black tracking-tighter">SEO & Performance Built-In</p>
+                        <p className="mt-4 md:mt-6 text-lg md:text-xl font-black tracking-tighter text-center">SEO & Performance Built-In</p>
                      </div>
                   </div>
                </div>

@@ -65,8 +65,8 @@ export default function GoogleAdsService() {
                 </Button>
               </div>
             </FadeIn>
-            <FadeIn direction="left" delay={0.2} className="relative hidden lg:block">
-               <div className="relative aspect-4/5 w-full max-w-[450px] ml-auto">
+            <FadeIn direction="left" delay={0.2} className="relative">
+               <div className="relative aspect-4/5 w-full max-w-[450px] mx-auto lg:ml-auto">
                   <div className="absolute inset-0 border-r-16 border-b-16 border-primary/10 -translate-x-8 translate-y-8 rounded-3xl" />
                   <div className="relative h-full w-full bg-card border-2 border-border p-10 rounded-3xl shadow-2xl flex flex-col justify-between">
                      <div className="flex items-center justify-between mb-8">
