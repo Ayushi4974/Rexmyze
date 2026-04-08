@@ -8,17 +8,17 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10 sm:gap-12">
           <div className="flex flex-col space-y-4 order-1 col-span-2 md:col-span-1">
             <Link href="/" className="inline-block">
-              <Image 
-                src="/logo-academy.png" 
-                alt="Rexmyze Academy Logo" 
-                width={160} 
-                height={56} 
-                className="h-14 w-auto object-contain" 
+              <Image
+                src="/logo-academy.png"
+                alt="Rexmyze Academy Logo"
+                width={160}
+                height={56}
+                className="h-14 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed md:max-w-xs">
-              Ahmedabad's leading AI-powered digital marketing institute in Maninagar. 
-              Empowering students, professionals, and business owners with 
+              Ahmedabad's leading AI-powered digital marketing institute in Maninagar.
+              Empowering students, professionals, and business owners with
               practical training and 100% placement support.
             </p>
           </div>
@@ -29,20 +29,22 @@ export default function Footer() {
             <div className="flex flex-col space-y-2">
               <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</Link>
               <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+              <Link href="/why-choose-us" className="text-sm text-muted-foreground hover:text-primary transition-colors">Why Choose Us</Link>
               <Link href="/courses" className="text-sm text-muted-foreground hover:text-primary transition-colors">All Courses</Link>
-              <Link href="/resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">Resources</Link>
+              <Link href="/book-demo" className="text-sm text-muted-foreground hover:text-primary transition-colors">Book Free Demo</Link>
               <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">Our Blog</Link>
             </div>
           </div>
 
-          {/* Top Courses */}
+          {/* Agency Services */}
           <div className="flex flex-col space-y-4 order-3 md:order-3">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Popular Courses</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Our Services</h3>
             <div className="flex flex-col space-y-2">
-              <Link href="/courses/seo" className="text-sm text-muted-foreground hover:text-primary transition-colors">SEO Masterclass</Link>
-              <Link href="/courses/google-ads" className="text-sm text-muted-foreground hover:text-primary transition-colors">Google Ads Training</Link>
-              <Link href="/courses/social-media" className="text-sm text-muted-foreground hover:text-primary transition-colors">SMM Course</Link>
-              <Link href="/book-demo" className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium">Book Free Demo</Link>
+              <Link href="/services/seo" className="text-sm text-muted-foreground hover:text-primary transition-colors">SEO Agency</Link>
+              <Link href="/services/google-ads" className="text-sm text-muted-foreground hover:text-primary transition-colors">Google Ads</Link>
+              <Link href="/services/performance-marketing" className="text-sm text-muted-foreground hover:text-primary transition-colors">Performance Marketing</Link>
+              <Link href="/services/video-editing" className="text-sm text-muted-foreground hover:text-primary transition-colors">Video Editing</Link>
+              <Link href="/services/web-development" className="text-sm text-muted-foreground hover:text-primary transition-colors">Web Development</Link>
             </div>
           </div>
 

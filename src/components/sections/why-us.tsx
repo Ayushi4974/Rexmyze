@@ -6,22 +6,22 @@ export default function WhyChooseUs() {
   const features = [
     {
       title: "Expert Trainers",
-      description: "Industry veterans with 5+ years of experience running active digital campaigns.",
+      description: "Industry veterans running active campaigns.",
       icon: Users,
     },
     {
       title: "Practical Focus",
-      description: "Live projects and real client work, not just theory. Practical hands-on training.",
+      description: "Live projects and real client work, not just theory.",
       icon: ShieldCheck,
     },
     {
       title: "Comprehensive Curriculum",
-      description: "Complete SEO, PPC, social media, and AI integration for future-ready skills.",
+      description: "SEO, PPC, social media, and AI integration.",
       icon: GraduationCap,
     },
     {
       title: "Job Support",
-      description: "Ideal for students, job seekers, and freelancers with 100% placement assistance.",
+      description: "Ideal for students, job seekers, and freelancers.",
       icon: Briefcase,
     },
   ];

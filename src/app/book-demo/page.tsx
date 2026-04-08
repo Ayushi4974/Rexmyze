@@ -1,123 +1,179 @@
-import { Calendar, Clock, Star, Play, CheckCircle2, Award, Zap, ChevronRight } from "lucide-react";
+import { Calendar, Clock, User, Phone, Mail, GraduationCap, ChevronRight, CheckCircle2, Star, PlayCircle, Users, Briefcase, Target } from "lucide-react";
 import Image from "next/image";
+import FadeIn from "@/components/ui/fade-in";
+import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 import { Button } from "@/components/ui/button";
 
 export default function BookDemoPage() {
-  const benefits = [
-    { title: "Live Session", description: "Experience our teaching style in a real-time live environment.", icon: Play },
-    { title: "Career Roadmap", description: "Get a personalized digital marketing career roadmap during the demo.", icon: Zap },
-    { title: "AI Tool Demo", description: "Witness the power of AI tools like ChatGPT, Gemini, and Midjourney.", icon: CheckCircle2 },
-    { title: "Certificate Guidance", description: "Understand how to earn Google, Meta, and HubSpot certificates.", icon: Award },
-  ];
-
   return (
-    <div className="flex flex-col w-full min-h-screen overflow-x-hidden pt-10">
-      {/* Book Demo Hero */}
-      <section className="py-24 lg:py-32 bg-background text-foreground relative overflow-hidden">
-         {/* Background Shapes */}
-         <div className="absolute top-1/2 left-0 -z-0 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/30 blur-[150px]" />
-         <div className="absolute top-0 right-0 -z-0 h-[800px] w-[800px] translate-x-1/4 -translate-y-1/4 rounded-full bg-primary/20 blur-[120px]" />
+    <div className="flex flex-col w-full overflow-x-hidden pt-10">
+      {/* Hero Section */}
+      <section className="py-24 bg-background text-foreground relative overflow-hidden">
+         <div className="absolute top-0 right-0 z-0 h-[600px] w-[600px] translate-x-1/4 -translate-y-1/4 rounded-full bg-primary/20 blur-[150px]" />
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+               <FadeIn direction="up">
+                  <div className="space-y-8">
+                     <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-[10px] font-black tracking-widest text-primary">
+                        Free Trial Class
+                     </span>
+                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-[0.95]">
+                        Experience Ahmedabad's <span className="highlight-primary">Best</span> <br /> Digital Training
+                     </h1>
+                     <p className="text-lg text-foreground/60 font-medium italic border-l-4 border-primary pl-6 max-w-xl">
+                        Not sure if digital marketing is for you? Join a free demo session and interact with our industry experts before you decide.
+                     </p>
+                     
+                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-10">
+                        <div className="flex gap-4 group">
+                           <div className="h-12 w-12 rounded-xl bg-card border border-border flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-lg">
+                              <Calendar size={24} />
+                           </div>
+                           <div>
+                              <p className="font-black tracking-tighter text-sm">Flexible Slots</p>
+                              <p className="text-xs opacity-60">Morning & Evening batches</p>
+                           </div>
+                        </div>
+                        <div className="flex gap-4 group">
+                           <div className="h-12 w-12 rounded-xl bg-card border border-border flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-lg">
+                              <Users size={24} />
+                           </div>
+                           <div>
+                              <p className="font-black tracking-tighter text-sm">Expert Interaction</p>
+                              <p className="text-xs opacity-60">Direct Q&A with mentors</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </FadeIn>
 
-         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-              
-              {/* Left Side: Copy */}
-              <div className="lg:col-span-7">
-                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-primary mb-10 animate-pulse">
-                    <span className="relative flex h-2 w-2">
-                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
-                       <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
-                    </span>
-                    Live Batch Starting 09 Apr
-                 </div>
-                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-10 leading-[0.95]">
-                    Take a <span className="highlight-primary">Free Demo</span> <br />
-                    Lecture & Start <br />
-                    Your Career!
-                 </h1>
-                 <p className="text-xl text-foreground/60 mb-14 max-w-xl font-medium italic border-l-4 border-primary pl-8">
-                    Discover why Rexmyze is Ahmedabad's #1 AI-powered digital marketing institute. 
-                    Reserve your seat for an exclusive demo session.
-                 </p>
-                 
-                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-12">
-                    {benefits.map((benefit, i) => (
-                      <div key={i} className="flex gap-6 group">
-                         <div className="h-14 w-14 rounded-2xl bg-white/10 flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
-                            <benefit.icon size={28} />
-                         </div>
-                         <div>
-                            <p className="font-black text-lg mb-2 uppercase tracking-tight">{benefit.title}</p>
-                            <p className="text-[11px] opacity-50 leading-relaxed italic font-medium">{benefit.description}</p>
-                         </div>
-                      </div>
-                    ))}
-                 </div>
-              </div>
-
-              {/* Right Side: High Conversion Form */}
-              <div className="lg:col-span-5 relative">
-                 <div className="bg-white text-black p-12 md:p-16 rounded-[3.5rem] shadow-2xl border-[12px] border-primary relative z-10 flex flex-col items-center text-center">
-                    <h3 className="text-3xl font-black mb-4 uppercase tracking-tighter">Reserve Your <span className="text-primary italic underline underline-offset-4">Spot</span></h3>
-                    <p className="text-[11px] font-black uppercase tracking-widest text-muted-foreground mb-12">No charges. Limited 50 seats per batch.</p>
-                    
-                    <form className="space-y-6 w-full text-left">
-                       <div className="space-y-2">
-                          <label className="text-[9px] font-black uppercase tracking-widest text-muted-foreground ml-1">Full Name</label>
-                          <input type="text" placeholder="Your Name" className="w-full bg-muted/30 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all h-16" />
-                       </div>
-                       <div className="space-y-2">
-                          <label className="text-[9px] font-black uppercase tracking-widest text-muted-foreground ml-1">Mobile Number</label>
-                          <input type="tel" placeholder="+91 00000 00000" className="w-full bg-muted/30 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all h-16" />
-                       </div>
-                       <div className="space-y-2">
-                          <label className="text-[9px] font-black uppercase tracking-widest text-muted-foreground ml-1">Select Course</label>
-                          <select className="w-full bg-muted/30 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all h-16 appearance-none">
-                             <option>Advanced AI Digital Marketing</option>
-                             <option>SEO Masterclass</option>
-                             <option>Social Media Marketing</option>
-                             <option>Google Ads Specialization</option>
-                          </select>
-                       </div>
-                       <div className="pt-6">
-                          <Button size="lg" className="w-full py-10 text-xl font-black uppercase tracking-widest rounded-xl bg-primary hover:bg-primary/90 shadow-2xl shadow-primary/30">
-                             Book Free Demo Now
-                             <ChevronRight size={24} className="ml-2" />
-                          </Button>
-                       </div>
-                    </form>
-                    
-                    <div className="mt-10 flex items-center justify-center gap-6 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
-                       <div className="flex items-center gap-2">
-                          <Star size={16} className="text-primary fill-current" />
-                          <span>4.9/5 Rating</span>
-                       </div>
-                       <div className="h-4 w-px bg-border" />
-                       <div className="flex items-center gap-2">
-                          <CheckCircle2 size={16} className="text-primary" />
-                          <span>ISO Certified</span>
-                       </div>
-                    </div>
-                 </div>
-                 
-                 {/* Decorative Elements */}
-                 <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-primary/20 blur-[100px]" />
-                 <div className="absolute -top-10 -left-10 h-40 w-40 bg-primary/10 blur-[80px]" />
-              </div>
-
+               <FadeIn direction="left" delay={0.2}>
+                  <div className="bg-card border-6 sm:border-12 border-primary p-8 sm:p-12 rounded-[2.5rem] shadow-2xl relative">
+                     <div className="absolute -top-6 -right-6 h-20 w-20 bg-primary rounded-full flex items-center justify-center text-white font-black text-xl rotate-12 shadow-xl border-4 border-white">
+                        FREE
+                     </div>
+                     <h2 className="text-2xl sm:text-3xl font-black mb-8 tracking-tighter">Reserve Your <span className="text-primary italic underline underline-offset-8">Seat</span></h2>
+                     <form className="space-y-6">
+                        <div className="space-y-2">
+                           <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Full Name</label>
+                           <div className="relative">
+                              <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
+                              <input type="text" placeholder="Your Name" className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" />
+                           </div>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                           <div className="space-y-2">
+                              <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Phone Number</label>
+                              <div className="relative">
+                                 <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
+                                 <input type="tel" placeholder="+91" className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" />
+                              </div>
+                           </div>
+                           <div className="space-y-2">
+                              <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Interested In</label>
+                              <div className="relative">
+                                 <GraduationCap size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
+                                 <select className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all appearance-none h-14">
+                                    <option>SEO</option>
+                                    <option>Social Media</option>
+                                    <option>Google Ads</option>
+                                    <option>Full Masterclass</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                        <Button size="lg" className="w-full py-8 text-xl font-black tracking-widest rounded-xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30 active:scale-[0.98] transition-all mt-4">
+                           Get Invite Link
+                           <ChevronRight size={24} className="ml-2" />
+                        </Button>
+                        <p className="text-[10px] text-center text-muted-foreground font-medium italic">We'll send the demo schedule via WhatsApp within 2 hours.</p>
+                     </form>
+                  </div>
+               </FadeIn>
             </div>
          </div>
       </section>
 
-      {/* Social Proof / Trust Section */}
-      <section className="py-24 bg-white  border-b border-border">
+      {/* What you'll learn in Demo */}
+      <section className="py-24 bg-white overflow-hidden">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+               <FadeIn direction="up">
+                  <h2 className="text-4xl font-black tracking-tighter mb-4">What's in the <span className="highlight-primary">Free Demo?</span></h2>
+                  <p className="text-lg text-muted-foreground font-medium italic">A 90-minute deep dive into the digital ecosystem.</p>
+               </FadeIn>
+            </div>
+
+            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               {[
+                  { title: "Live Tools", desc: "Watch us use AI tools like ChatGPT for content automation.", icon: PlayCircle },
+                  { title: "Career Path", desc: "Get a personalized roadmap for your career goals.", icon: Target },
+                  { title: "Live Case Study", desc: "How we scaled an Ahmedabad brand from 0 to 1M.", icon: Star },
+                  { title: "Job Market", desc: "Understanding the demand for digital talent in 2024.", icon: Briefcase }
+               ].map((item, i) => (
+                  <StaggerItem key={i}>
+                     <div className="bg-muted/30 p-8 rounded-3xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-2xl transition-all h-full group">
+                        <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                           <item.icon size={24} />
+                        </div>
+                        <h3 className="text-xl font-black mb-3 tracking-tight">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed italic font-medium">{item.desc}</p>
+                     </div>
+                  </StaggerItem>
+               ))}
+            </StaggerContainer>
+         </div>
+      </section>
+
+      {/* Trust Quote */}
+      <section className="py-24 border-y border-border bg-card">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h4 className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 inline-block">Trusted by students from top institutions</h4>
-            <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-12 opacity-30 grayscale pointer-events-none transition-all hover:opacity-100 hover:grayscale-0">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-8" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta" className="h-8" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg" alt="HubSpot" className="h-8" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" className="h-8" />
+            <FadeIn direction="up">
+               <div className="max-w-4xl mx-auto space-y-10">
+                  <div className="flex justify-center gap-2">
+                     {[1, 2, 3, 4, 5].map((s) => (
+                        <Star key={s} size={24} className="fill-primary text-primary animate-pulse" />
+                     ))}
+                  </div>
+                  <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight italic">
+                     "The demo session at <span className="text-primary">Rexmyze</span> was a game-changer. it cleared all my doubts about transitioning to digital marketing."
+                  </h2>
+                  <div className="flex items-center justify-center gap-4">
+                     <div className="h-14 w-14 rounded-full border-2 border-primary p-1">
+                        <Image src="https://i.pravatar.cc/150?u=student1" alt="Student" width={56} height={56} className="rounded-full grayscale" />
+                     </div>
+                     <div className="text-left">
+                        <p className="font-black tracking-tighter text-sm">Sneha Patel</p>
+                        <p className="text-[10px] text-muted-foreground font-black tracking-widest">Now SEO Executive @ DigitalFlow</p>
+                     </div>
+                  </div>
+               </div>
+            </FadeIn>
+         </div>
+      </section>
+
+      {/* FAQ Mini */}
+      <section className="py-24 bg-white overflow-hidden">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto space-y-8">
+               <h3 className="text-2xl font-black tracking-widest text-center mb-12 italic">Quick <span className="text-primary italic underline underline-offset-8">Information</span></h3>
+               {[
+                  { q: "Is it really free?", a: "Yes, 100% free with no obligation to join." },
+                  { q: "Offline or Online?", a: "We have both options available at our Maninagar center." },
+                  { q: "Do I need any technical skill?", a: "No, anyone from any background can join." }
+               ].map((faq, i) => (
+                  <FadeIn key={i} direction="up" delay={i * 0.1}>
+                     <div className="flex gap-6 items-start p-6 rounded-2xl bg-muted/20 border border-transparent hover:border-primary/10 transition-colors">
+                        <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-white shrink-0 mt-1">
+                           <CheckCircle2 size={18} />
+                        </div>
+                        <div>
+                           <p className="font-black tracking-tight mb-1">{faq.q}</p>
+                           <p className="text-sm text-muted-foreground font-medium italic">{faq.a}</p>
+                        </div>
+                     </div>
+                  </FadeIn>
+               ))}
             </div>
          </div>
       </section>

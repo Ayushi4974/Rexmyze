@@ -13,9 +13,11 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Courses", href: "/courses" },
-    { name: "Resources", href: "/resources" },
+    { name: "Why Choose Us", href: "/why-choose-us" },
+    { name: "Book Free Demo", href: "/book-demo" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "FAQ", href: "/faq" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
   ];
 
   return (

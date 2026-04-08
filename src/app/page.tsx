@@ -2,6 +2,7 @@ import Hero from "@/components/sections/hero";
 import Stats from "@/components/sections/stats";
 import TopCourses from "@/components/sections/top-courses";
 import WhyChooseUs from "@/components/sections/why-us";
+import AgencyServices from "@/components/sections/agency-services";
 import Testimonials from "@/components/sections/testimonials";
 import Partners from "@/components/sections/partners";
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,7 @@ export default function Home() {
       <Stats />
       <TopCourses />
       <WhyChooseUs />
+      <AgencyServices />
       
       {/* Mid-Page Call to Action */}
       <section className="py-20 bg-primary text-primary-foreground overflow-hidden">
@@ -47,28 +49,29 @@ export default function Home() {
       <Testimonials />
       <Partners />
 
-      {/* Final Newsletter/Lead Capture Section */}
+      {/* Contact & Enroll Section */}
       <section className="py-24 bg-muted/30 border-t border-border overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up">
-            <div className="bg-card border border-border rounded-4xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 shadow-xl">
-              <div className="flex-1 text-center md:text-left">
-                <h2 className="text-3xl font-bold mb-4 tracking-tight">
-                  Not sure which course is <span className="text-primary italic">right for you?</span>
+            <div className="bg-card border-x-4 border-x-primary rounded-4xl p-8 md:p-16 flex flex-col items-center text-center gap-10 shadow-xl">
+              <div className="max-w-3xl">
+                <h2 className="text-3xl font-black mb-6 tracking-tight uppercase">
+                  Contact & <span className="text-primary italic">Enroll</span>
                 </h2>
-                <p className="text-muted-foreground text-lg">
-                  Get a free career counseling session with our expert mentors. 
-                  Simply drop your details and we'll call you back!
+                <p className="text-muted-foreground text-xl font-medium mb-8 leading-relaxed">
+                  Ready to start? Call <span className="text-primary font-black">7096181126</span> or visit <br className="hidden md:block" />
+                  <span className="italic">B-2,112, Mansi Residency, opp. Good Luck Society, Daxini Society, Maninagar, Ahmedabad, Gujarat 380008.</span>
                 </p>
-              </div>
-              
-              <div className="w-full md:w-auto shrink-0">
-                 <Link href="/contact">
-                    <Button size="lg" className="w-full px-12 group">
-                      Get Free Counseling
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <div className="flex flex-col sm:flex-row justify-center gap-6">
+                  <Link href="/book-demo">
+                    <Button size="lg" className="px-12 py-8 h-auto text-lg font-black uppercase tracking-widest bg-primary hover:bg-primary/90">
+                      Enroll Now for a free demo!
                     </Button>
-                 </Link>
+                  </Link>
+                </div>
+                <p className="mt-10 text-sm font-black text-muted-foreground uppercase tracking-widest opacity-60">
+                  Thank you for choosing Rexmyze Academy – let's build your digital future!
+                </p>
               </div>
             </div>
           </FadeIn>

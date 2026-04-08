@@ -1,3 +1,4 @@
+import CoursesHero from "@/components/sections/courses-hero";
 import CourseCard from "@/components/ui/course-card";
 import FadeIn from "@/components/ui/fade-in";
 import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
@@ -61,30 +62,31 @@ export default function CoursesPage() {
   ];
 
   return (
-    <div className="py-24 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <FadeIn direction="up">
-          <div className="mb-16 text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
-              Our Digital Marketing <span className="text-primary italic">Programs</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our comprehensive list of courses designed to provide 
-              practical, AI-powered training for the modern digital era.
-            </p>
-          </div>
-        </FadeIn>
+    <div className="flex flex-col w-full overflow-x-hidden">
+      <CoursesHero />
+      
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn direction="up">
+            <div className="mb-20 text-center max-w-3xl mx-auto">
+              <h2 className="text-4xl font-black md:text-5xl mb-6 tracking-tight">Available <span className="text-primary italic">Programs</span></h2>
+              <p className="text-lg text-muted-foreground font-medium italic">
+                Each program is crafted with industry standards to ensure you emerge as a future-ready digital professional.
+              </p>
+            </div>
+          </FadeIn>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allCourses.map((course, i) => (
-            <StaggerItem key={i}>
-              <CourseCard 
-                {...course}
-              />
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </div>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {allCourses.map((course, i) => (
+              <StaggerItem key={i}>
+                <CourseCard 
+                  {...course}
+                />
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default function Hero() {
               <p className="text-muted-foreground text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl leading-relaxed font-medium">
                 Transform your career with hands-on Digital Marketing Course in Ahmedabad at Rexmyze Academy. 
                 Led by experts with 5+ years of experience, we offer SEO-friendly training focused on 
-                real-world skills like SEO, Google Ads, Meta Ads, and AI-powered lead generation through live projects.
+                real-world skills like SEO, Google Ads, Meta Ads, and lead generation through live projects.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8 sm:mb-12 w-full sm:w-auto">
