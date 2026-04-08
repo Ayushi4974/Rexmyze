@@ -30,13 +30,13 @@ export default function ResourcesPage() {
   return (
     <div className="flex flex-col w-full min-h-screen overflow-x-hidden pt-10">
       {/* Resources Hero */}
-      <section className="py-24 bg-white dark:bg-black relative">
+      <section className="py-24 bg-white  relative">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-primary mb-8">
                Free Learning Material
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-8 sm:mb-10 leading-[0.95]">
-               Digital <span className="highlight-red">Resources</span> Center
+               Digital <span className="highlight-primary">Resources</span> Center
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-6 sm:pl-8 ml-auto mr-auto">
                Download high-value eBook, checklists, and guides curated by 
@@ -82,7 +82,7 @@ export default function ResourcesPage() {
             </div>
 
             {/* Exclusive Video Workshop Invite */}
-            <div className="mt-16 sm:mt-24 bg-foreground text-background p-8 sm:p-12 md:p-16 rounded-3xl border-l-8 sm:border-l-12 border-l-primary shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10 sm:gap-12 relative overflow-hidden">
+            <div className="mt-16 sm:mt-24 bg-background text-foreground p-8 sm:p-12 md:p-16 rounded-3xl border-l-8 sm:border-l-12 border-l-primary shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10 sm:gap-12 relative overflow-hidden">
                <div className="absolute right-0 top-0 opacity-10 translate-x-1/4 -translate-y-1/4 pointer-events-none">
                   <PlayCircle className="size-64 sm:size-[400px]" />
                </div>

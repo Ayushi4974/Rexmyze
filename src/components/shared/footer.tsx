@@ -1,14 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background py-10 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10 sm:gap-12">
-          {/* Brand Info */}
           <div className="flex flex-col space-y-4 order-1 col-span-2 md:col-span-1">
-            <Link href="/" className="text-2xl font-bold tracking-tight text-primary">
-              REXMYZE<span className="text-accent underline decoration-2 underline-offset-4"> ACADEMY</span>
+            <Link href="/" className="inline-block">
+              <Image 
+                src="/logo-academy.png" 
+                alt="Rexmyze Academy Logo" 
+                width={160} 
+                height={56} 
+                className="h-14 w-auto object-contain" 
+              />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed md:max-w-xs">
               Ahmedabad's leading AI-powered digital marketing institute in Maninagar. 

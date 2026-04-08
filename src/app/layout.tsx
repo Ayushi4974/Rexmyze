@@ -29,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable} scroll-smooth`}>
-      <body className="font-sans antialiased bg-background text-foreground flex flex-col min-h-screen">
+      <body
+        className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-background text-foreground flex flex-col min-h-screen`}
+        suppressHydrationWarning
+      >
         <Navbar />
         <StickyInquiry />
         <main className="grow">

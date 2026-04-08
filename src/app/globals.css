@@ -3,9 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  --primary: #E1261C; /* DSA Red */
+  --primary: #5192CC; /* Academy Blue */
   --primary-foreground: #ffffff;
-  --accent: #E1261C;
+  --accent: #5192CC;
   --accent-foreground: #ffffff;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
@@ -21,9 +21,9 @@
   
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #E1261C;
+  --color-primary: #5192CC;
   --color-primary-foreground: #ffffff;
-  --color-accent: #E1261C;
+  --color-accent: #5192CC;
   --color-accent-foreground: #ffffff;
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
@@ -36,18 +36,6 @@
   --radius-sm: calc(var(--radius) - 0.5rem);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f0f0f;
-    --foreground: #f8f8f8;
-    --card: #1a1a1a;
-    --card-foreground: #f8f8f8;
-    --muted: #242424;
-    --muted-foreground: #a0a0a0;
-    --border: #333333;
-  }
-}
-
 @layer base {
   * {
     @apply border-border;
@@ -58,7 +46,7 @@
 }
 
 @layer utilities {
-  .highlight-red {
+  .highlight-primary {
      @apply bg-primary text-white px-2 py-0.5 rounded-sm;
   }
   

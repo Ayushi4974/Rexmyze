@@ -31,7 +31,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
   return (
     <div className="flex flex-col w-full">
       {/* Course Hero Section */}
-      <section className="relative py-24 bg-foreground text-background overflow-hidden">
+      <section className="relative py-24 bg-background text-foreground overflow-hidden">
         <div className="absolute top-0 right-0 -z-0 opacity-20 translate-x-1/4 -translate-y-1/4">
           <BookOpen size={600} className="text-primary-foreground" />
         </div>

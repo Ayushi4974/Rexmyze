@@ -2,6 +2,8 @@ import CourseCard from "@/components/ui/course-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import FadeIn from "@/components/ui/fade-in";
+import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 
 export default function TopCourses() {
   const topCourses = [
@@ -35,45 +37,50 @@ export default function TopCourses() {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-24 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-10">
-          <div className="max-w-2xl">
-            <div className="text-primary font-bold text-xs uppercase tracking-widest mb-4">
-              Premium Training Programs
+        <FadeIn direction="up">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-10">
+            <div className="max-w-2xl">
+              <div className="text-primary font-bold text-xs uppercase tracking-widest mb-4">
+                Premium Training Programs
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-6">
+                Our <span className="highlight-primary">Flagship</span> Courses
+              </h2>
+              <p className="text-lg text-muted-foreground font-medium italic border-l-4 border-primary pl-6">
+                Choose from our curated selection of AI-powered digital marketing courses 
+                designed to turn beginners into industry experts in just 2 months.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-6">
-              Our <span className="highlight-red">Flagship</span> Courses
-            </h2>
-            <p className="text-lg text-muted-foreground font-medium italic border-l-4 border-primary pl-6">
-              Choose from our curated selection of AI-powered digital marketing courses 
-              designed to turn beginners into industry experts in just 2 months.
-            </p>
+            <Link href="/courses">
+              <button className="btn-outline hidden md:flex items-center gap-2 px-10 py-5">
+                View All Courses
+                <ChevronRight size={18} />
+              </button>
+            </Link>
           </div>
-          <Link href="/courses">
-            <button className="btn-outline hidden md:flex items-center gap-2 px-10 py-5">
-              View All Courses
-              <ChevronRight size={18} />
-            </button>
-          </Link>
-        </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {topCourses.map((course, i) => (
-            <CourseCard 
-              key={i}
-              {...course}
-            />
+            <StaggerItem key={i}>
+              <CourseCard 
+                {...course}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
         
-        <div className="mt-12 text-center md:hidden">
-          <Link href="/courses">
-            <Button variant="outline" className="w-full">
-              View All Courses
-            </Button>
-          </Link>
-        </div>
+        <FadeIn delay={0.4}>
+          <div className="mt-12 text-center md:hidden">
+            <Link href="/courses">
+              <Button variant="outline" className="w-full">
+                View All Courses
+              </Button>
+            </Link>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

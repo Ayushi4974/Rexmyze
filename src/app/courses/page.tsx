@@ -1,4 +1,6 @@
 import CourseCard from "@/components/ui/course-card";
+import FadeIn from "@/components/ui/fade-in";
+import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 
 export default function CoursesPage() {
   const allCourses = [
@@ -59,26 +61,29 @@ export default function CoursesPage() {
   ];
 
   return (
-    <div className="py-24">
+    <div className="py-24 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
-            Our Digital Marketing <span className="text-primary italic">Programs</span>
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore our comprehensive list of courses designed to provide 
-            practical, AI-powered training for the modern digital era.
-          </p>
-        </div>
+        <FadeIn direction="up">
+          <div className="mb-16 text-center">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
+              Our Digital Marketing <span className="text-primary italic">Programs</span>
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore our comprehensive list of courses designed to provide 
+              practical, AI-powered training for the modern digital era.
+            </p>
+          </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allCourses.map((course, i) => (
-            <CourseCard 
-              key={i}
-              {...course}
-            />
+            <StaggerItem key={i}>
+              <CourseCard 
+                {...course}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </div>
   );

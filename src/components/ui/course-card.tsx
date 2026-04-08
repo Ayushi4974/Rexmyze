@@ -33,7 +33,7 @@ export default function CourseCard({
         <div className="absolute top-0 left-0 bg-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-2">
           {category}
         </div>
-        <div className="absolute bottom-4 right-4 bg-white/95 dark:bg-black/95 px-2 py-1 rounded shadow-md flex items-center gap-1">
+        <div className="absolute bottom-4 right-4 bg-white/95 px-2 py-1 rounded shadow-md flex items-center gap-1">
            <Star className="h-3 w-3 text-primary fill-current" />
            <span className="text-[10px] font-black italic">4.9/5</span>
         </div>
@@ -66,7 +66,7 @@ export default function CourseCard({
 
         <Link 
           href={`/courses/${slug}`}
-          className="mt-8 inline-flex items-center justify-center bg-foreground text-background py-4 rounded-lg font-black text-xs uppercase tracking-widest group-hover:bg-primary transition-all overflow-hidden relative"
+          className="mt-8 inline-flex items-center justify-center bg-background text-foreground py-4 rounded-lg font-black text-xs uppercase tracking-widest group-hover:bg-primary transition-all overflow-hidden relative"
         >
           <span className="relative z-10 flex items-center gap-2">View Course Details <ChevronRight size={14} /></span>
         </Link>

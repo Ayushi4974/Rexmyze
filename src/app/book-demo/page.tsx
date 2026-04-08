@@ -13,7 +13,7 @@ export default function BookDemoPage() {
   return (
     <div className="flex flex-col w-full min-h-screen overflow-x-hidden pt-10">
       {/* Book Demo Hero */}
-      <section className="py-24 lg:py-32 bg-foreground text-background relative overflow-hidden">
+      <section className="py-24 lg:py-32 bg-background text-foreground relative overflow-hidden">
          {/* Background Shapes */}
          <div className="absolute top-1/2 left-0 -z-0 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/30 blur-[150px]" />
          <div className="absolute top-0 right-0 -z-0 h-[800px] w-[800px] translate-x-1/4 -translate-y-1/4 rounded-full bg-primary/20 blur-[120px]" />
@@ -31,11 +31,11 @@ export default function BookDemoPage() {
                     Live Batch Starting 09 Apr
                  </div>
                  <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-10 leading-[0.95]">
-                    Take a <span className="highlight-red">Free Demo</span> <br />
+                    Take a <span className="highlight-primary">Free Demo</span> <br />
                     Lecture & Start <br />
                     Your Career!
                  </h1>
-                 <p className="text-xl text-background/60 mb-14 max-w-xl font-medium italic border-l-4 border-primary pl-8">
+                 <p className="text-xl text-foreground/60 mb-14 max-w-xl font-medium italic border-l-4 border-primary pl-8">
                     Discover why Rexmyze is Ahmedabad's #1 AI-powered digital marketing institute. 
                     Reserve your seat for an exclusive demo session.
                  </p>
@@ -110,7 +110,7 @@ export default function BookDemoPage() {
       </section>
 
       {/* Social Proof / Trust Section */}
-      <section className="py-24 bg-white dark:bg-black border-b border-border">
+      <section className="py-24 bg-white  border-b border-border">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h4 className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 inline-block">Trusted by students from top institutions</h4>
             <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-12 opacity-30 grayscale pointer-events-none transition-all hover:opacity-100 hover:grayscale-0">

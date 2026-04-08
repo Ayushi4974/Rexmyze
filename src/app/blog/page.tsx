@@ -34,13 +34,13 @@ export default function BlogPage() {
   return (
     <div className="flex flex-col w-full min-h-screen overflow-x-hidden pt-10">
       {/* Blog Hero */}
-      <section className="py-24 bg-white dark:bg-black relative">
+      <section className="py-24 bg-white  relative">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-primary mb-8">
                Knowledge & Insights
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-8 sm:mb-10 leading-[0.95]">
-               The <span className="highlight-red">Rexmyze</span> Blog
+               The <span className="highlight-primary">Rexmyze</span> Blog
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-6 sm:pl-8 ml-auto mr-auto">
                Latest trends, strategies, and AI-powered insights from the leaders 
@@ -86,7 +86,7 @@ export default function BlogPage() {
             </div>
 
             {/* Newsletter Subscription */}
-            <div className="mt-16 sm:mt-24 bg-foreground text-background p-8 sm:p-12 md:p-20 rounded-3xl sm:rounded-4xl border-r-8 sm:border-r-12 border-r-primary shadow-2xl relative overflow-hidden">
+            <div className="mt-16 sm:mt-24 bg-background text-foreground p-8 sm:p-12 md:p-20 rounded-3xl sm:rounded-4xl border-r-8 sm:border-r-12 border-r-primary shadow-2xl relative overflow-hidden">
                <div className="absolute top-0 left-0 opacity-10 -translate-x-1/4 -translate-y-1/4 pointer-events-none">
                   <Zap className="size-64 sm:size-[400px]" />
                </div>

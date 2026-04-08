@@ -29,8 +29,8 @@ export default function SMMCoursePage() {
 
   return (
     <div className="flex flex-col w-full">
-      <section className="relative py-24 bg-foreground text-background overflow-hidden">
-        <div className="absolute top-0 right-0 -z-0 opacity-20 translate-x-1/4 -translate-y-1/4">
+      <section className="relative py-24 bg-background text-foreground overflow-hidden">
+        <div className="absolute top-0 right-0 z-0 opacity-20 translate-x-1/4 -translate-y-1/4">
           <BookOpen size={600} className="text-secondary-foreground" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -82,7 +82,7 @@ export default function SMMCoursePage() {
               <div className="bg-muted/30 p-8 rounded-3xl border border-border sticky top-24">
                 <h3 className="text-xl font-bold mb-6">Course Highlights</h3>
                 <div className="space-y-4 mb-8">
-                  {course.features.map((feature, i) => (<div key={i} className="flex items-center gap-3"><CheckCircle2 className="text-accent h-5 w-5 flex-shrink-0" /><span className="text-sm font-medium">{feature}</span></div>))}
+                  {course.features.map((feature, i) => (<div key={i} className="flex items-center gap-3"><CheckCircle2 className="text-accent h-5 w-5 shrink-0" /><span className="text-sm font-medium">{feature}</span></div>))}
                 </div>
                 <Button className="w-full py-6 rounded-xl font-bold">Ask for Details</Button>
               </div>

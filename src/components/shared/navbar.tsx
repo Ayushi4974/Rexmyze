@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, ChevronRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -41,14 +42,18 @@ export default function Navbar() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="w-full border-b border-border bg-white/95 dark:bg-black/95 backdrop-blur-md">
+      <nav className="w-full border-b border-border bg-white/95 backdrop-blur-md">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <Link href="/" className="text-xl sm:text-2xl font-black tracking-tight flex items-center group">
-               <span className="bg-primary text-white px-2 py-0.5 rounded-sm mr-1.5 transition-transform group-hover:scale-110">REX</span>
-               <div className="flex flex-col leading-none">
-                 <span className="text-foreground text-lg sm:text-xl">MYZE</span>
-                 <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.1em] text-primary">ACADEMY</span>
+            <Link href="/" className="flex items-center group">
+               <div className="relative h-14 w-40">
+                 <Image 
+                   src="/logo-academy.png" 
+                   alt="Rexmyze Academy Logo" 
+                   fill 
+                   className="object-contain"
+                   priority
+                 />
                </div>
             </Link>
           </div>
@@ -88,7 +93,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden w-full bg-white dark:bg-black border-b border-border overflow-hidden absolute top-[calc(100%-1px)] left-0 z-40 shadow-xl"
+            className="lg:hidden w-full bg-white border-b border-border overflow-hidden absolute top-[calc(100%-1px)] left-0 z-40 shadow-xl"
           >
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (

@@ -29,8 +29,8 @@ export default function SEOCoursePage() {
 
   return (
     <div className="flex flex-col w-full">
-      <section className="relative py-24 bg-foreground text-background overflow-hidden">
-        <div className="absolute top-0 right-0 -z-0 opacity-20 translate-x-1/4 -translate-y-1/4">
+      <section className="relative py-24 bg-background text-foreground overflow-hidden">
+        <div className="absolute top-0 right-0 z-0 opacity-20 translate-x-1/4 -translate-y-1/4">
           <BookOpen size={600} className="text-primary-foreground" />
         </div>
 
@@ -126,7 +126,7 @@ export default function SEOCoursePage() {
                 <div className="space-y-4 mb-8">
                   {course.features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="text-accent h-5 w-5 flex-shrink-0" />
+                      <CheckCircle2 className="text-accent h-5 w-5 shrink-0" />
                       <span className="text-sm font-medium">{feature}</span>
                     </div>
                   ))}
