@@ -19,9 +19,9 @@ export default function ContactHero() {
                 Contact Support Center
               </span>
               
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground mb-10 text-left">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] sm:leading-[1.05] text-foreground mb-10 text-left">
                 Get in <br />
-                <span className="bg-[#54A0D6] text-white px-4 py-1 inline-block mt-2">Touch</span> With Us.
+                <span className="text-[#54A0D6] italic">Touch</span> With Us.
               </h1>
               
               <div className="border-l-4 border-[#54A0D6] pl-6 mb-12">
@@ -54,17 +54,18 @@ export default function ContactHero() {
             </div>
           </FadeIn>
 
-          <FadeIn direction="left" delay={0.2} className="relative mt-20 lg:mt-0">
-            <div className="relative aspect-square w-full max-w-[500px] mx-auto lg:ml-auto p-10">
+          <FadeIn direction="left" delay={0.2} className="relative mt-8 lg:mt-0 lg:ml-auto hidden lg:block">
+            <div className="relative aspect-square w-full max-w-[260px] sm:max-w-[500px] mx-auto p-4 sm:p-10">
                {/* Decorative Circles */}
                <div className="absolute inset-0 border-2 border-[#54A0D6]/20 rounded-full animate-spin-slow" />
-               <div className="absolute inset-6 border border-[#54A0D6]/10 rounded-full animate-reverse-spin" />
+               <div className="absolute inset-4 sm:inset-6 border border-[#54A0D6]/10 rounded-full animate-reverse-spin" />
                
                <div className="relative h-full w-full bg-[#54A0D6]/5 rounded-full flex items-center justify-center overflow-hidden">
-                  <Globe size={300} className="text-[#54A0D6]/20" />
+                  <Globe size={140} className="text-[#54A0D6]/20 sm:hidden" />
+                  <Globe size={300} className="text-[#54A0D6]/20 hidden sm:block" />
                   <motion.div 
                     animate={{ 
-                       y: [0, -20, 0],
+                       y: [0, -8, 0],
                        rotate: [0, 5, 0]
                     }}
                     transition={{ 
@@ -74,12 +75,12 @@ export default function ContactHero() {
                     }}
                     className="absolute inset-0 flex items-center justify-center"
                   >
-                     <div className="relative h-64 w-64 bg-white/40 backdrop-blur-md rounded-3xl border border-white/50 shadow-2xl flex items-center justify-center">
+                     <div className="relative h-40 w-40 sm:h-64 sm:w-64 bg-white/40 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-white/50 shadow-2xl flex items-center justify-center scale-[0.85] sm:scale-100">
                         <div className="flex flex-col items-center">
-                           <div className="h-20 w-20 bg-[#54A0D6] rounded-2xl flex items-center justify-center text-white shadow-xl mb-4">
-                              <MessageSquare size={40} />
+                           <div className="h-12 w-12 sm:h-20 sm:w-20 bg-[#54A0D6] rounded-xl sm:rounded-2xl flex items-center justify-center text-white shadow-xl mb-3 sm:mb-4">
+                              <MessageSquare size={24} className="sm:w-10 sm:h-10" />
                            </div>
-                           <p className="text-center font-black text-[#54A0D6] text-xl">24/7 Support</p>
+                           <p className="text-center font-black text-[#54A0D6] text-base sm:text-xl leading-tight">24/7 Support</p>
                         </div>
                      </div>
                   </motion.div>

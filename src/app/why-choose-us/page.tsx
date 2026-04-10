@@ -55,18 +55,18 @@ export default function WhyChooseUsPage() {
             <FadeIn direction="up">
               <div>
                 <span className="text-primary font-bold text-xs tracking-widest mb-6 block">The Rexmyze Advantage</span>
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-8">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-8">
                   Why Students <span className="text-primary italic">Choose</span> Us Every Time
                 </h1>
                 <p className="text-lg text-muted-foreground mb-10 max-w-xl font-medium leading-relaxed italic border-l-4 border-primary pl-6">
                   At Rexmyze Academy, we don't just fill seats; we build futures. Discover why we are Ahmedabad's choice for digital marketing excellence.
                 </p>
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/courses">
-                    <Button size="lg" className="px-8 py-7 font-black text-lg">Browse Courses</Button>
+                    <Button size="lg" className="px-8 py-7 font-black text-lg w-full sm:w-auto">Browse Courses</Button>
                   </Link>
                   <Link href="/book-demo">
-                    <button className="btn-outline px-8 py-4 font-bold">Book Free Demo</button>
+                    <button className="btn-outline px-8 py-4 font-bold w-full sm:w-auto">Book Free Demo</button>
                   </Link>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function WhyChooseUsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-20">
              <FadeIn direction="up">
-                <h2 className="text-4xl font-black mb-6 tracking-tight">Our <span className="highlight-primary">Core Pillars</span></h2>
+                <h2 className="text-3xl sm:text-4xl font-black mb-6 tracking-tight">Our <span className="text-primary italic">Core Pillars</span></h2>
                 <p className="text-lg text-muted-foreground font-medium italic">We've built our reputation on these high standards, ensuring you get the best value for your career investment.</p>
              </FadeIn>
           </div>
@@ -123,11 +123,11 @@ export default function WhyChooseUsPage() {
       {/* Comparison Section */}
       <section className="py-24 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="bg-card border-8 border-primary rounded-[3rem] p-8 md:p-20 shadow-2xl relative">
+           <div className="bg-card border-4 sm:border-8 border-primary rounded-4xl sm:rounded-[3rem] p-6 sm:p-20 shadow-2xl relative">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                  <FadeIn direction="up">
                     <div>
-                       <h2 className="text-4xl font-black mb-8 leading-tight tracking-tighter">The Rexmyze <br /> <span className="text-primary italic">Transformation</span></h2>
+                       <h2 className="text-3xl sm:text-4xl font-black mb-8 leading-tight tracking-tighter">The Rexmyze <br /> <span className="text-primary italic">Transformation</span></h2>
                        <div className="space-y-6">
                           <div className="flex gap-4 items-start">
                              <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
@@ -150,18 +150,21 @@ export default function WhyChooseUsPage() {
                        </div>
                     </div>
                  </FadeIn>
-                 <div className="relative">
+                 <div className="relative mt-12 lg:mt-0">
                     <FadeIn direction="up" delay={0.2}>
-                       <div className="space-y-4">
-                          <div className="bg-muted p-8 rounded-3xl border-l-8 border-muted-foreground tracking-tight opacity-50 grayscale">
-                             <p className="font-bold text-sm mb-2">Other Institutes</p>
-                             <p className="italic font-medium">Outdated theoretical knowledge, crowded batches, and lack of real-world application.</p>
+                        <div className="space-y-4">
+                          <div className="bg-muted p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-l-4 sm:border-l-8 border-muted-foreground tracking-tight opacity-60 grayscale scale-95 origin-left">
+                             <p className="font-bold text-xs mb-2 uppercase tracking-widest text-muted-foreground">Other Institutes</p>
+                             <p className="italic font-medium text-sm sm:text-base">Outdated theoretical knowledge, crowded batches, and lack of real-world application.</p>
                           </div>
-                          <div className="bg-primary p-8 rounded-3xl border-l-8 border-white text-white tracking-tight shadow-2xl">
-                             <p className="font-bold text-sm mb-2 text-white/70">The Rexmyze Way</p>
-                             <p className="italic font-bold text-lg">100% Practical exposure on live campaigns, AI-integrated learning, and guaranteed job support.</p>
+                          <div className="bg-primary p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-l-4 sm:border-l-8 border-white text-white tracking-tight shadow-2xl relative overflow-hidden">
+                             <div className="absolute top-0 right-0 p-2 opacity-10">
+                                <ShieldCheck size={80} />
+                             </div>
+                             <p className="font-bold text-xs mb-2 text-white/70 uppercase tracking-widest">The Rexmyze Way</p>
+                             <p className="italic font-bold text-base sm:text-lg">100% Practical exposure on live campaigns, AI-integrated learning, and guaranteed job support.</p>
                           </div>
-                       </div>
+                        </div>
                     </FadeIn>
                  </div>
               </div>
@@ -177,12 +180,12 @@ export default function WhyChooseUsPage() {
               "We don't teach digital marketing; we build careers."
             </h2>
             <div className="flex items-center justify-center gap-4">
-               <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-white">
-                  <Image src="https://i.pravatar.cc/150?u=director" alt="Director" width={48} height={48} />
-               </div>
+                <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-white relative">
+                   <Image src="/images/founder.png" alt="Founder" fill className="object-cover" />
+                </div>
                <div className="text-left">
                   <p className="font-bold tracking-widest text-xs">Aman Vazirani</p>
-                  <p className="text-[10px] text-white/70 font-medium">Founder & Director, Rexmyze</p>
+                  <p className="text-[10px] text-white/70 font-medium whitespace-nowrap">Founder & CEO, Rexmyze Academy</p>
                </div>
             </div>
           </FadeIn>

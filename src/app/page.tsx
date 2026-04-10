@@ -60,7 +60,7 @@ export default function Home() {
                 </h2>
                 <p className="text-muted-foreground text-xl font-medium mb-8 leading-relaxed">
                   Ready to start? Call <span className="text-primary font-black">7096181126</span> or visit <br className="hidden md:block" />
-                  <span className="italic">B-2,112, Mansi Residency, opp. Good Luck Society, Daxini Society, Maninagar, Ahmedabad, Gujarat 380008.</span>
+                  <span className="italic">2, Prem Sagar Apartments, Opp Chavla Park, Bhairavnath Char Rasta, Maninagar, Ahmedabad – 380008</span>
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-6">
                   <Link href="/book-demo">

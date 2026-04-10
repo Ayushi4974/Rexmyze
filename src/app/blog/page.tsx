@@ -39,8 +39,8 @@ export default function BlogPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-primary mb-8">
                Knowledge & Insights
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-8 sm:mb-10 leading-[0.95]">
-               The <span className="highlight-primary">Rexmyze</span> Blog
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-8 sm:mb-10 leading-[1.1] sm:leading-[0.95]">
+               The <span className="text-primary italic">Rexmyze</span> Blog
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground opacity-70 max-w-2xl mx-auto font-medium italic border-l-4 border-primary pl-6 sm:pl-8 ml-auto mr-auto">
                Latest trends, strategies, and AI-powered insights from the leaders 

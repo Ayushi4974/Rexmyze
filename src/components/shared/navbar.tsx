@@ -24,7 +24,7 @@ export default function Navbar() {
     <div className="flex flex-col w-full sticky top-0 z-50">
       {/* Top Header Bar - Optimized for mobile */}
       <div className="bg-primary text-white py-2 hidden sm:block">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-[13px] font-medium">
+        <div className="w-full px-4 sm:px-6 lg:px-6 flex justify-between items-center text-[13px] font-medium">
           <div className="flex items-center gap-6">
             <a href="tel:7096181126" className="flex items-center gap-2 hover:text-white/80 transition-colors">
               <Phone size={14} className="fill-current" />
@@ -45,10 +45,10 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <nav className="w-full border-b border-border bg-white/95 backdrop-blur-md">
-        <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="w-full flex h-24 items-center justify-between px-4 sm:px-6 lg:px-6">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center group">
-               <div className="relative h-12 w-32 sm:h-14 sm:w-40">
+               <div className="relative h-16 w-48 sm:h-20 sm:w-64">
                  <Image 
                    src="/logo-academy.png" 
                    alt="Rexmyze Academy Logo" 
@@ -60,12 +60,12 @@ export default function Navbar() {
             </Link>
           </div>
           
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center lg:gap-6 xl:gap-10">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href} 
-                className="text-[14px] xl:text-[15px] font-bold text-foreground/80 hover:text-primary transition-colors"
+                className="text-[14px] xl:text-[15px] font-bold text-foreground/80 hover:text-primary transition-colors whitespace-nowrap"
               >
                 {link.name}
               </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Link href="/book-demo" className="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-6 py-2.5 text-[14px] font-bold text-white transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
+            <Link href="/book-demo" className="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-6 py-2.5 text-[14px] font-bold text-white transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20 whitespace-nowrap">
               Get Demo
               <ChevronRight size={16} className="ml-1" />
             </Link>

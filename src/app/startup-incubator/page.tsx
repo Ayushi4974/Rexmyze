@@ -23,7 +23,7 @@ export default function StartupIncubatorPage() {
                  Entrepreneurship Program
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-8 sm:mb-10 leading-[0.95]">
-                 Rexmyze <span className="highlight-primary">Incubator</span> <br className="hidden sm:block" />
+                 Rexmyze <span className="text-primary italic">Incubator</span> <br className="hidden sm:block" />
                  From Idea to Exit
               </h1>
               <p className="text-lg sm:text-xl text-foreground/60 mb-10 sm:mb-14 max-w-xl mx-auto font-medium italic border-l-4 border-primary pl-6 sm:pl-8 ml-auto mr-auto">
@@ -77,7 +77,7 @@ export default function StartupIncubatorPage() {
                </FadeIn>
                <div className="space-y-12">
                   <FadeIn direction="right">
-                    <h2 className="text-4xl md:text-5xl font-black tracking-tighter leading-tight uppercase">Ready to <span className="highlight-primary">Scale Your Startup?</span></h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter leading-tight uppercase">Ready to <span className="text-primary italic">Scale Your Startup?</span></h2>
                     <div className="space-y-8 font-medium italic mt-12">
                        <div className="flex gap-6 group">
                           <div className="h-12 w-12 rounded-xl bg-primary flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-all">

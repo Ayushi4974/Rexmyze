@@ -9,10 +9,10 @@ import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 
 export default function Hero() {
   const stats = [
-    { label: "Start Date", value: "09 Apr" },
-    { label: "Students Per Batch", value: "Only 50" },
-    { label: "Successful Placements", value: "8000+" },
-    { label: "Internship Program", value: "8 Months" },
+    { label: "Start Date", value: "10 April" },
+    { label: "Students Per Batch", value: "20" },
+    { label: "Successful Placements", value: "1k+" },
+    { label: "Training Program", value: "6 Months" },
     { label: "International Certs", value: "15+" },
     { label: "AI Marketing Tools", value: "40+" },
   ];
@@ -22,19 +22,19 @@ export default function Hero() {
       {/* Background Subtle Elements */}
       <div className="absolute top-0 right-0 h-full w-1/3 bg-muted/30 -z-10 clip-path-hero hidden lg:block" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 lg:pb-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24 lg:pb-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
           {/* Hero Content */}
           <div className="lg:col-span-7 flex flex-col items-start pt-10">
             <FadeIn direction="up">
               <div className="flex flex-wrap items-center gap-4 text-primary font-bold text-xs uppercase tracking-tighter mb-6">
-                Ahmedabad's <span className="bg-primary text-white px-2 py-0.5 rounded-sm">No.1</span> AI-Based Digital Marketing Institute (Maninagar)
+                Ahmedabad's AI-Based Digital Marketing Academy
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6 sm:mb-8">
                 Welcome to <span className="text-primary italic">Rexmyze Academy</span> <br className="hidden sm:block" />
-                Digital Marketing Institute <span className="bg-primary text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-sm">Maninagar</span>
+                Digital Marketing Academy
               </h1>
 
               <p className="text-muted-foreground text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl leading-relaxed font-medium">
@@ -88,9 +88,9 @@ export default function Hero() {
         </div>
 
         {/* Stats Ribbon Bar */}
-        <StaggerContainer delay={0.4} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 border-t border-border mt-10">
+        <StaggerContainer delay={0.4} className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 border-t border-border mt-10">
           {stats.map((stat, i) => (
-            <StaggerItem key={i} className={`flex flex-col items-center justify-center py-6 sm:py-10 px-4 group hover:bg-muted/50 transition-colors ${i % 2 === 0 ? 'border-r' : ''} ${i < 4 ? 'border-b md:border-b-0' : ''} lg:border-b-0 lg:border-r border-border`}>
+            <StaggerItem key={i} className={`flex flex-col items-center justify-center py-6 sm:py-10 px-4 group hover:bg-muted/50 transition-colors border-b border-r border-border ${i % 2 !== 0 ? 'border-r-0' : ''} sm:border-b-0 sm:border-r last:border-b-0 lg:border-r border-border`}>
               <span className="text-xl sm:text-2xl lg:text-3xl font-black text-foreground group-hover:text-primary transition-colors mb-1 sm:mb-2 whitespace-nowrap">{stat.value}</span>
               <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-muted-foreground text-center line-clamp-1">{stat.label}</span>
             </StaggerItem>

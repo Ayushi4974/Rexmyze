@@ -11,13 +11,13 @@ export default function Footer() {
               <Image
                 src="/logo-academy.png"
                 alt="Rexmyze Academy Logo"
-                width={160}
-                height={56}
-                className="h-14 w-auto object-contain"
+                width={200}
+                height={70}
+                className="h-18 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed md:max-w-xs">
-              Ahmedabad's leading AI-powered digital marketing institute in Maninagar.
+              Ahmedabad's leading AI-powered digital marketing academy.
               Empowering students, professionals, and business owners with
               practical training and 100% placement support.
             </p>
@@ -58,7 +58,7 @@ export default function Footer() {
                 7096181126
               </a>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                2, Prem Sagar Apartments, Opp Chavla Park, Bhairavnath Char Rasta, Maninagar, Ahmedabad – 380008
+                8th Floor , B112, Sarover Complex, opposite Samruddhi Apartment, Vasant Vihar, Navrangpura, Ahmedabad, Gujarat 380009
               </p>
             </div>
           </div>

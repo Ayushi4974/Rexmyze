@@ -22,7 +22,7 @@ export default function ContactPage() {
          <ContactHero />
 
          {/* Main Contact Section */}
-         <section className="py-24 bg-white overflow-hidden">
+         <section className="py-20 sm:py-24 bg-white overflow-hidden mt-10 sm:mt-0">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 

@@ -17,14 +17,14 @@ export default function BookDemoPage() {
                      <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-[10px] font-black tracking-widest text-primary">
                         Free Trial Class
                      </span>
-                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-[0.95]">
-                        Experience Ahmedabad's <span className="highlight-primary">Best</span> <br /> Digital Training
+                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-[1.1] sm:leading-[0.95]">
+                        Experience Ahmedabad's <span className="text-primary italic">Best</span> <br /> Digital Training
                      </h1>
                      <p className="text-lg text-foreground/60 font-medium italic border-l-4 border-primary pl-6 max-w-xl">
                         Not sure if digital marketing is for you? Join a free demo session and interact with our industry experts before you decide.
                      </p>
                      
-                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-10">
+                     <div className="grid grid-cols-2 gap-6 pt-10">
                         <div className="flex gap-4 group">
                            <div className="h-12 w-12 rounded-xl bg-card border border-border flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-lg">
                               <Calendar size={24} />
@@ -99,12 +99,12 @@ export default function BookDemoPage() {
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
                <FadeIn direction="up">
-                  <h2 className="text-4xl font-black tracking-tighter mb-4">What's in the <span className="highlight-primary">Free Demo?</span></h2>
+                  <h2 className="text-3xl sm:text-4xl font-black tracking-tighter mb-4">What's in the <span className="text-primary italic">Free Demo?</span></h2>
                   <p className="text-lg text-muted-foreground font-medium italic">A 90-minute deep dive into the digital ecosystem.</p>
                </FadeIn>
             </div>
 
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 pb-12 sm:pb-0">
                {[
                   { title: "Live Tools", desc: "Watch us use AI tools like ChatGPT for content automation.", icon: PlayCircle },
                   { title: "Career Path", desc: "Get a personalized roadmap for your career goals.", icon: Target },
@@ -112,12 +112,12 @@ export default function BookDemoPage() {
                   { title: "Job Market", desc: "Understanding the demand for digital talent in 2024.", icon: Briefcase }
                ].map((item, i) => (
                   <StaggerItem key={i}>
-                     <div className="bg-muted/30 p-8 rounded-3xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-2xl transition-all h-full group">
-                        <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                           <item.icon size={24} />
+                     <div className="bg-muted/30 p-5 sm:p-8 rounded-3xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-2xl transition-all h-full group">
+                        <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                           <item.icon size={20} className="sm:w-6 sm:h-6" />
                         </div>
-                        <h3 className="text-xl font-black mb-3 tracking-tight">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed italic font-medium">{item.desc}</p>
+                        <h3 className="text-sm sm:text-lg font-black mb-2 sm:mb-3 tracking-tighter sm:tracking-tight leading-tight">{item.title}</h3>
+                        <p className="text-[10px] sm:text-sm text-muted-foreground leading-relaxed italic font-medium">{item.desc}</p>
                      </div>
                   </StaggerItem>
                ))}
@@ -135,8 +135,8 @@ export default function BookDemoPage() {
                         <Star key={s} size={24} className="fill-primary text-primary animate-pulse" />
                      ))}
                   </div>
-                  <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight italic">
-                     "The demo session at <span className="text-primary">Rexmyze</span> was a game-changer. it cleared all my doubts about transitioning to digital marketing."
+                  <h2 className="text-xl sm:text-3xl md:text-5xl font-black tracking-tighter leading-relaxed sm:leading-tight italic">
+                     "The demo session at <span className="text-primary italic">Rexmyze</span> was a game-changer. it cleared all my doubts about transitioning to digital marketing."
                   </h2>
                   <div className="flex items-center justify-center gap-4">
                      <div className="h-14 w-14 rounded-full border-2 border-primary p-1">

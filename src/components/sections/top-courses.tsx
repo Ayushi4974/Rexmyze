@@ -46,7 +46,7 @@ export default function TopCourses() {
                 Premium Training Programs
               </div>
               <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-6">
-                Our <span className="highlight-primary">Top</span> Courses
+                Our <span className="text-primary italic">Top</span> Courses
               </h2>
               <p className="text-lg text-muted-foreground font-medium italic border-l-4 border-primary pl-6">
                 Choose from our curated selection of AI-powered digital marketing courses 

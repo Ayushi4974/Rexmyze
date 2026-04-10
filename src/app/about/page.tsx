@@ -78,7 +78,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
            <FadeIn direction="up">
              <div className="mb-20">
-                <h2 className="text-4xl font-black md:text-5xl mb-8 tracking-tighter">Values That <span className="highlight-primary">Define</span> Us</h2>
+                <h2 className="text-4xl font-black md:text-5xl mb-8 tracking-tighter">Values That <span className="text-primary italic">Define</span> Us</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-medium">
                    At Rexmyze, we don't just follow trends; we set them. Our core values reflect our commitment to excellence.
                 </p>

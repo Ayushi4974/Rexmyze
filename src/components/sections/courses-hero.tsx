@@ -25,7 +25,7 @@ export default function CoursesHero() {
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground mb-10 text-left">
                 Master the Art of <br />
-                <span className="bg-primary text-white px-4 py-1 inline-block mt-2">Digital Growth.</span>
+                <span className="text-primary italic">Digital Growth.</span>
               </h1>
               
               <div className="border-l-4 border-primary pl-6 mb-12">
@@ -76,10 +76,10 @@ export default function CoursesHero() {
 
                {/* Floating Content Badge */}
                <motion.div 
-                 initial={{ opacity: 0, y: 30 }}
-                 whileInView={{ opacity: 1, y: 0 }}
+                 initial={{ opacity: 0, y: -30, rotate: -10 }}
+                 whileInView={{ opacity: 1, y: 0, rotate: -5 }}
                  transition={{ delay: 0.6 }}
-                 className="absolute -bottom-6 -left-6 bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-border flex flex-col items-center justify-center z-20"
+                 className="absolute -top-6 -left-6 bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-border flex flex-col items-center justify-center z-20"
                >
                   <span className="text-3xl sm:text-4xl font-black text-primary">15+</span>
                   <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-widest text-muted-foreground mt-1">Recognized Certifications</span>

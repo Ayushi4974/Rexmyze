@@ -22,7 +22,7 @@ export default function AboutHero() {
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground mb-10">
                 Empowering the Next <br />
-                <span className="bg-[#54A0D6] text-white px-4 py-1 inline-block mt-2">Digital Leaders.</span>
+                <span className="text-[#54A0D6] italic">Digital Leaders.</span>
               </h1>
               
               <div className="border-l-4 border-[#54A0D6] pl-6 mb-12">
@@ -65,12 +65,12 @@ export default function AboutHero() {
 
               {/* Floating Badge */}
               <motion.div 
-                initial={{ scale: 0, rotate: -20 }}
-                animate={{ scale: 1, rotate: -10 }}
+                initial={{ scale: 0, rotate: -10 }}
+                animate={{ scale: 1, rotate: -5 }}
                 transition={{ delay: 0.5, type: "spring" }}
-                className="absolute -top-6 -right-6 bg-white p-8 rounded-3xl shadow-2xl border border-border z-20 flex flex-col items-center justify-center min-w-[180px]"
+                className="absolute -top-6 -left-6 bg-white p-6 sm:p-8 rounded-3xl shadow-2xl border border-border z-20 flex flex-col items-center justify-center min-w-[150px] sm:min-w-[180px]"
               >
-                <span className="text-3xl font-black text-foreground">10+ Years</span>
+                <span className="text-2xl sm:text-3xl font-black text-foreground">10+ Years</span>
                 <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground mt-1">Of Industry Excellence</span>
               </motion.div>
             </div>

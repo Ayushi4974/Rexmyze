@@ -4,22 +4,22 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Saiyed Aziz",
-      role: "Digital Marketing Professional",
-      image: "https://i.pravatar.cc/150?u=aziz",
+      role: "Performance Marketer",
+      image: "/images/testimonials/saiyed-aziz.png",
       content: "Joining Rexmyze Academy was the best decision for my career. The practical training and AI tools integration made learning so much easier and relevant to today's industry需求.",
       rating: 5,
     },
     {
       name: "Zaki Vohra",
-      role: "Business Owner",
-      image: "https://i.pravatar.cc/150?u=zaki",
+      role: "Social Media Strategist",
+      image: "/images/testimonials/zaki-vohra.png",
       content: "As a business owner, I needed skills to grow my brand online. The expert trainers at Rexmyze Academy provided me with exactly what I needed - clear, practical, and effective strategies.",
       rating: 5,
     },
     {
       name: "Amit Patel",
-      role: "SEO Specialist",
-      image: "https://i.pravatar.cc/150?u=amit",
+      role: "SEO & Analytics Expert",
+      image: "/images/testimonials/amit-patel.png",
       content: "The focus on live projects at Rexmyze Agency based training helped me land a job within weeks. Highly recommended for anyone looking for real skills.",
       rating: 5,
     },

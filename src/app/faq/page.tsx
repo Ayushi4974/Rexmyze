@@ -51,8 +51,8 @@ export default function FAQPage() {
                <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-[10px] font-black tracking-widest text-primary mb-8">
                   Support Center
                </span>
-               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-[0.95] mb-8">
-                  Common <span className="highlight-primary">Questions</span> <br />
+               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] sm:leading-[0.95] mb-8">
+                  Common <span className="text-primary italic">Questions</span> <br />
                   Answered for You
                </h1>
                <p className="text-lg text-foreground/60 font-medium italic border-l-4 border-primary pl-6 max-w-xl mx-auto">
@@ -133,21 +133,21 @@ export default function FAQPage() {
       <section className="py-24 bg-white text-center overflow-hidden">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <FadeIn direction="up">
-               <div className="bg-primary p-12 md:p-20 rounded-[3rem] text-white space-y-8 shadow-2xl relative overflow-hidden">
+               <div className="bg-primary p-8 sm:p-12 md:p-20 rounded-4xl sm:rounded-[3rem] text-white space-y-6 sm:space-y-8 shadow-2xl relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                      <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2" />
                   </div>
-                  <h2 className="text-3xl md:text-6xl font-black tracking-tighter leading-tight uppercase">
-                     Start Your <span className="italic underline underline-offset-8">Growth</span> Journey <br />
+                  <h2 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter leading-tight uppercase">
+                     Start Your <span className="italic underline underline-offset-8">Growth</span> Journey <br className="hidden sm:block" />
                      Today
                   </h2>
-                  <p className="max-w-xl mx-auto text-white/80 font-medium italic text-lg">
+                  <p className="max-w-xl mx-auto text-white/80 font-medium italic text-sm sm:text-lg">
                      Join thousands of graduates building successful careers in digital marketing.
                   </p>
-                  <Link href="/book-demo" className="inline-block">
-                     <Button variant="secondary" size="lg" className="py-10 px-16 text-xl font-black rounded-2xl shadow-2xl hover:scale-105 transition-all">
+                  <Link href="/book-demo" className="inline-block w-full sm:w-auto">
+                     <Button variant="secondary" size="lg" className="w-full sm:w-auto py-6 sm:py-10 px-8 sm:px-16 text-lg sm:text-xl font-black rounded-xl sm:rounded-2xl shadow-2xl hover:scale-105 active:scale-95 transition-all">
                         Book Your Demo Class
-                        <MessageCircle size={24} className="ml-3" />
+                        <MessageCircle size={20} className="ml-3 sm:w-6 sm:h-6" />
                      </Button>
                   </Link>
                </div>
