@@ -12,6 +12,7 @@ export default function BookDemoPage() {
   const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     phone: "",
     course: "SEO",
   });
@@ -29,7 +30,7 @@ export default function BookDemoPage() {
 
       if (res.ok) {
         setSuccess(true);
-        setFormData({ name: "", phone: "", course: "SEO" });
+        setFormData({ name: "", email: "", phone: "", course: "SEO" });
       } else {
         const data = await res.json();
         alert(data.error || "Something went wrong. Please try again.");
@@ -96,7 +97,7 @@ export default function BookDemoPage() {
                             <CheckCircle2 size={48} />
                          </div>
                          <h3 className="text-2xl font-black">Seat Reserved!</h3>
-                         <p className="text-muted-foreground font-medium italic">We have received your request. Our team will contact you on WhatsApp shortly.</p>
+                         <p className="text-muted-foreground font-medium italic">We have received your request. Our team will contact you on Mail shortly.</p>
                          <Button variant="outline" onClick={() => setSuccess(false)} className="mt-4">Register Another</Button>
                        </div>
                      ) : (
@@ -111,6 +112,20 @@ export default function BookDemoPage() {
                                   placeholder="Your Name" 
                                   value={formData.name}
                                   onChange={(e) => setFormData({...formData, name: e.target.value})}
+                                  className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" 
+                                />
+                             </div>
+                          </div>
+                          <div className="space-y-2">
+                             <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Email Address</label>
+                             <div className="relative">
+                                <Mail size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
+                                <input 
+                                  required
+                                  type="email" 
+                                  placeholder="Your Email" 
+                                  value={formData.email}
+                                  onChange={(e) => setFormData({...formData, email: e.target.value})}
                                   className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" 
                                 />
                              </div>
@@ -160,7 +175,7 @@ export default function BookDemoPage() {
                                </>
                              )}
                           </Button>
-                          <p className="text-[10px] text-center text-muted-foreground font-medium italic">We'll send the demo schedule via WhatsApp within 2 hours.</p>
+                          <p className="text-[10px] text-center text-muted-foreground font-medium italic">We'll send the demo schedule to your Email inbox within 2 hours.</p>
                        </form>
                      )}
                   </div>
