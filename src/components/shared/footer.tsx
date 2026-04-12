@@ -59,12 +59,6 @@ export default function Footer() {
                   </div>
                   info@rexmyze.com
                 </a>
-                <a href="tel:7096181126" className="group flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-all">
-                  <div className="p-1.5 rounded-md bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                    <Phone size={14} />
-                  </div>
-                  7096181126
-                </a>
               </div>
 
               <div className="space-y-4">
@@ -73,10 +67,14 @@ export default function Footer() {
                     <MapPin size={14} />
                   </div>
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Navrangpura Center</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      8th Floor, B112, Sarover Complex, opposite Samruddhi Apartment, Vasant Vihar, Navrangpura, Ahmedabad, Gujarat 380009
+                    <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Maninagar Branch</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-1">
+                      2, Prem Sagar Apartments, Opp Chavla Park, Bhairavnath Char Rasta, Maninagar, Ahmedabad – 380008
                     </p>
+                    <a href="tel:7096181126" className="text-xs font-bold text-primary hover:text-primary/80 transition-colors flex items-center gap-2 mt-1">
+                      <Phone size={14} />
+                      +91 7096181126
+                    </a>
                   </div>
                 </div>
                 
@@ -85,10 +83,14 @@ export default function Footer() {
                     <MapPin size={14} />
                   </div>
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Maninagar Branch</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      2, Prem Sagar Apartments, Opp Chavla Park, Bhairavnath Char Rasta, Maninagar, Ahmedabad – 380008
+                    <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Navrangpura Center</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-1">
+                      8th Floor, B112, Sarover Complex, opposite Samruddhi Apartment, Vasant Vihar, Navrangpura, Ahmedabad, Gujarat 380009
                     </p>
+                    <a href="tel:8735881126" className="text-xs font-bold text-primary hover:text-primary/80 transition-colors flex items-center gap-2 mt-1">
+                      <Phone size={14} />
+                      +91 8735881126
+                    </a>
                   </div>
                 </div>
               </div>
