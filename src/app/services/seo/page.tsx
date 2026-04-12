@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/ui/fade-in";
 import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 
-export default function SEOAgencyService() {
+export default function SEOService() {
   const highlights = [
     { title: "SEO Audit", desc: "Complete technical analysis of your site's structure and performance.", icon: FileSearch },
     { title: "Keyword Strategy", desc: "Intent-driven queries that bring meaningful traffic, not just volume.", icon: Target },
@@ -51,7 +51,7 @@ export default function SEOAgencyService() {
                   6+ Years of Search Excellence
                 </span>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground mb-10">
-                  SEO Agency in <br />
+                  SEO Service in <br />
                   <span className="bg-[#54A0D6] text-white px-4 py-1 inline-block mt-2">Ahmedabad</span>
                 </h1>
                 <div className="border-l-4 border-[#54A0D6] pl-6 mb-12">

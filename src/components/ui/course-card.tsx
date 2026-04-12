@@ -50,14 +50,14 @@ export default function CourseCard({
         <div className="mt-auto grid grid-cols-2 border-t border-border pt-6 gap-4">
            <div className="flex flex-col border-r border-border pr-4">
               <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mb-1">Duration</span>
-              <span className="text-sm font-black flex items-center gap-2">
+              <span className="text-[15px] font-black flex items-center gap-2 whitespace-nowrap">
                  <Clock className="h-3.5 w-3.5 text-primary" />
                  {duration}
               </span>
            </div>
            <div className="flex flex-col pl-2">
               <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mb-1">Modules</span>
-              <span className="text-sm font-black flex items-center gap-2">
+              <span className="text-[15px] font-black flex items-center gap-2 whitespace-nowrap">
                  <BookOpen className="h-3.5 w-3.5 text-primary" />
                  {modules}
               </span>

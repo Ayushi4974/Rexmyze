@@ -13,7 +13,7 @@ export default function Footer() {
                 alt="Rexmyze Academy Logo"
                 width={200}
                 height={70}
-                className="h-18 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed md:max-w-xs">
@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="flex flex-col space-y-4 order-3 md:order-3">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Our Services</h3>
             <div className="flex flex-col space-y-2">
-              <Link href="/services/seo" className="text-sm text-muted-foreground hover:text-primary transition-colors">SEO Agency</Link>
+              <Link href="/services/seo" className="text-sm text-muted-foreground hover:text-primary transition-colors">SEO Service</Link>
               <Link href="/services/google-ads" className="text-sm text-muted-foreground hover:text-primary transition-colors">Google Ads</Link>
               <Link href="/services/performance-marketing" className="text-sm text-muted-foreground hover:text-primary transition-colors">Performance Marketing</Link>
               <Link href="/services/video-editing" className="text-sm text-muted-foreground hover:text-primary transition-colors">Video Editing</Link>

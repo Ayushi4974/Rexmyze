@@ -1,6 +1,7 @@
 "use client";
 
-import { Mail, MapPin, Phone, MessageSquare, Clock, Globe, ChevronRight, Award } from "lucide-react";
+import { useState } from "react";
+import { Mail, MapPin, Phone, MessageSquare, Clock, Globe, ChevronRight, Award, Loader2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import FadeIn from "@/components/ui/fade-in";
@@ -8,6 +9,16 @@ import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 import ContactHero from "@/components/sections/contact-hero";
 
 export default function ContactPage() {
+   const [loading, setLoading] = useState(false);
+   const [success, setSuccess] = useState(false);
+   const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      center: "Maninagar Branch (Ahmedabad)",
+      message: "",
+   });
+
    const branches = [
       {
          city: "Maninagar Branch (Ahmedabad)",
@@ -16,6 +27,37 @@ export default function ContactPage() {
          email: "info@rexmyze.com",
       }
    ];
+
+   const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      setLoading(true);
+      
+      try {
+         const res = await fetch("/api/messages", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+         });
+
+         if (res.ok) {
+            setSuccess(true);
+            setFormData({ 
+               name: "", 
+               email: "", 
+               phone: "", 
+               center: "Maninagar Branch (Ahmedabad)", 
+               message: "" 
+            });
+         } else {
+            const data = await res.json();
+            alert(data.error || "Something went wrong. Please try again.");
+         }
+      } catch (error) {
+         alert("Failed to send message. Check your internet connection.");
+      } finally {
+         setLoading(false);
+      }
+   };
 
    return (
       <div className="flex flex-col w-full overflow-x-hidden pt-10">
@@ -61,41 +103,94 @@ export default function ContactPage() {
                      <FadeIn direction="left">
                         <div className="bg-card border-6 sm:border-10 border-primary p-6 sm:p-10 md:p-16 rounded-3xl sm:rounded-4xl shadow-2xl relative">
                            <h2 className="text-2xl sm:text-4xl font-black mb-8 sm:mb-10 tracking-tighter text-left">Send Us a <span className="text-primary italic underline underline-offset-8">Message</span></h2>
-                           <form className="space-y-8">
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                 <div className="space-y-3 flex flex-col items-start">
-                                    <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Full Name</label>
-                                    <input type="text" placeholder="John Doe" className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" />
+                           
+                           {success ? (
+                              <div className="py-12 text-center space-y-6">
+                                 <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto">
+                                    <CheckCircle2 size={48} />
                                  </div>
-                                 <div className="space-y-3 flex flex-col items-start">
-                                    <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Email Address</label>
-                                    <input type="email" placeholder="john@example.com" className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" />
-                                 </div>
+                                 <h3 className="text-2xl font-black">Message Sent!</h3>
+                                 <p className="text-muted-foreground font-medium italic">Thank you for contacting us. Our team will get back to you within 2 working hours.</p>
+                                 <Button variant="outline" onClick={() => setSuccess(false)} className="mt-4">Send Another Message</Button>
                               </div>
-
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                 <div className="space-y-3 flex flex-col items-start">
-                                    <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Phone Number</label>
-                                    <input type="tel" placeholder="+91 00000 00000" className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" />
+                           ) : (
+                              <form onSubmit={handleSubmit} className="space-y-8">
+                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                    <div className="space-y-3 flex flex-col items-start">
+                                       <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Full Name</label>
+                                       <input 
+                                          required
+                                          type="text" 
+                                          placeholder="John Doe" 
+                                          value={formData.name}
+                                          onChange={(e) => setFormData({...formData, name: e.target.value})}
+                                          className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" 
+                                       />
+                                    </div>
+                                    <div className="space-y-3 flex flex-col items-start">
+                                       <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Email Address</label>
+                                       <input 
+                                          required
+                                          type="email" 
+                                          placeholder="john@example.com" 
+                                          value={formData.email}
+                                          onChange={(e) => setFormData({...formData, email: e.target.value})}
+                                          className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" 
+                                       />
+                                    </div>
                                  </div>
-                                 <div className="space-y-3 flex flex-col items-start">
-                                    <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Preferred Center</label>
-                                    <select className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all appearance-none h-16">
-                                       <option>Maninagar Branch (Ahmedabad)</option>
-                                    </select>
+
+                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                    <div className="space-y-3 flex flex-col items-start">
+                                       <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Phone Number</label>
+                                       <input 
+                                          required
+                                          type="tel" 
+                                          placeholder="+91 00000 00000" 
+                                          value={formData.phone}
+                                          onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                                          className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" 
+                                       />
+                                    </div>
+                                    <div className="space-y-3 flex flex-col items-start">
+                                       <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Preferred Center</label>
+                                       <select 
+                                          value={formData.center}
+                                          onChange={(e) => setFormData({...formData, center: e.target.value})}
+                                          className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all appearance-none h-16"
+                                       >
+                                          <option value="Maninagar Branch (Ahmedabad)">Maninagar Branch (Ahmedabad)</option>
+                                       </select>
+                                    </div>
                                  </div>
-                              </div>
 
-                              <div className="space-y-3 flex flex-col items-start">
-                                 <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Your Message</label>
-                                 <textarea placeholder="Describe your inquiry..." rows={5} className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all resize-none" />
-                              </div>
+                                 <div className="space-y-3 flex flex-col items-start">
+                                    <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Your Message</label>
+                                    <textarea 
+                                       required
+                                       placeholder="Describe your inquiry..." 
+                                       rows={5} 
+                                       value={formData.message}
+                                       onChange={(e) => setFormData({...formData, message: e.target.value})}
+                                       className="w-full bg-muted/50 border-none rounded-xl px-6 py-5 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all resize-none" 
+                                    />
+                                 </div>
 
-                              <Button size="lg" className="w-full py-6 sm:py-10 text-lg sm:text-xl font-black tracking-widest rounded-xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30 active:scale-[0.98] transition-all">
-                                 Send Message
-                                 <ChevronRight size={24} className="ml-2" />
-                              </Button>
-                           </form>
+                                 <Button 
+                                    disabled={loading}
+                                    type="submit" 
+                                    size="lg" 
+                                    className="w-full py-6 sm:py-10 text-lg sm:text-xl font-black tracking-widest rounded-xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30 active:scale-[0.98] transition-all"
+                                 >
+                                    {loading ? <Loader2 className="animate-spin" size={24} /> : (
+                                       <>
+                                          Send Message
+                                          <ChevronRight size={24} className="ml-2" />
+                                       </>
+                                    )}
+                                 </Button>
+                              </form>
+                           )}
                         </div>
                      </FadeIn>
                   </div>

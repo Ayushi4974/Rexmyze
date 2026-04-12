@@ -18,14 +18,14 @@ import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 
 export default function AgencyServices() {
   const services = [
-    { title: "Video Editing", href: "/services/video-editing", icon: Video },
+    { title: "Web Development", href: "/services/web-development", icon: Code2 },
     { title: "Performance Marketing", href: "/services/performance-marketing", icon: TrendingUp },
-    { title: "SEO Agency", href: "/services/seo", icon: Search },
+    { title: "SEO Service", href: "/services/seo", icon: Search },
     { title: "Google Ads", href: "/services/google-ads", icon: MousePointer2 },
     { title: "E-commerce SEO", href: "/services/ecommerce-seo", icon: ShoppingBag },
     { title: "Social Media", href: "/services/social-media-marketing", icon: Share2 },
     { title: "Local SEO", href: "/services/local-seo", icon: MapPin },
-    { title: "Web Development", href: "/services/web-development", icon: Code2 },
+    { title: "Video Editing", href: "/services/video-editing", icon: Video },
   ];
 
   return (

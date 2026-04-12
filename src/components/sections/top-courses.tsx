@@ -8,16 +8,25 @@ import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 export default function TopCourses() {
   const topCourses = [
     {
-      title: "SEO & Google Ads",
-      description: "Master search engine optimization and paid ads to drive results for any business.",
-      image: "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000&auto=format&fit=crop",
+      title: "Advanced SEO",
+      description: "Master technical, on-page, and off-page SEO to rank any website on the first page.",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1000&auto=format&fit=crop",
       duration: "2 Months",
       modules: "12",
-      slug: "seo-google-ads",
+      slug: "seo",
       category: "Performance",
     },
     {
-      title: "Meta Ads & Social Media",
+      title: "Google Ads",
+      description: "Master search, display, and video campaigns to drive high-quality traffic and ROI.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+      duration: "2 Months",
+      modules: "10",
+      slug: "google-ads",
+      category: "Performance",
+    },
+    {
+      title: "Social Ads",
       description: "Create high-converting Facebook and Instagram campaigns to fuel brand growth.",
       image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1000&auto=format&fit=crop",
       duration: "2 Months",
@@ -61,8 +70,8 @@ export default function TopCourses() {
             </Link>
           </div>
         </FadeIn>
-
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ 
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {topCourses.map((course, i) => (
             <StaggerItem key={i}>
               <CourseCard 

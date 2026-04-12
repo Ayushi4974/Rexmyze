@@ -1,10 +1,46 @@
-import { Calendar, Clock, User, Phone, Mail, GraduationCap, ChevronRight, CheckCircle2, Star, PlayCircle, Users, Briefcase, Target } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Calendar, Clock, User, Phone, Mail, GraduationCap, ChevronRight, CheckCircle2, Star, PlayCircle, Users, Briefcase, Target, Loader2 } from "lucide-react";
 import Image from "next/image";
 import FadeIn from "@/components/ui/fade-in";
 import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 import { Button } from "@/components/ui/button";
 
 export default function BookDemoPage() {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    course: "SEO",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSuccess(true);
+        setFormData({ name: "", phone: "", course: "SEO" });
+      } else {
+        const data = await res.json();
+        alert(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Failed to send request. Check your internet connection.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex flex-col w-full overflow-x-hidden pt-10">
       {/* Hero Section */}
@@ -53,41 +89,80 @@ export default function BookDemoPage() {
                         FREE
                      </div>
                      <h2 className="text-2xl sm:text-3xl font-black mb-8 tracking-tighter">Reserve Your <span className="text-primary italic underline underline-offset-8">Seat</span></h2>
-                     <form className="space-y-6">
-                        <div className="space-y-2">
-                           <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Full Name</label>
-                           <div className="relative">
-                              <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
-                              <input type="text" placeholder="Your Name" className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" />
-                           </div>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                           <div className="space-y-2">
-                              <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Phone Number</label>
-                              <div className="relative">
-                                 <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
-                                 <input type="tel" placeholder="+91" className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" />
-                              </div>
-                           </div>
-                           <div className="space-y-2">
-                              <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Interested In</label>
-                              <div className="relative">
-                                 <GraduationCap size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
-                                 <select className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all appearance-none h-14">
-                                    <option>SEO</option>
-                                    <option>Social Media</option>
-                                    <option>Google Ads</option>
-                                    <option>Full Masterclass</option>
-                                 </select>
-                              </div>
-                           </div>
-                        </div>
-                        <Button size="lg" className="w-full py-8 text-xl font-black tracking-widest rounded-xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30 active:scale-[0.98] transition-all mt-4">
-                           Get Invite Link
-                           <ChevronRight size={24} className="ml-2" />
-                        </Button>
-                        <p className="text-[10px] text-center text-muted-foreground font-medium italic">We'll send the demo schedule via WhatsApp within 2 hours.</p>
-                     </form>
+                     
+                     {success ? (
+                       <div className="py-12 text-center space-y-6">
+                         <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto">
+                            <CheckCircle2 size={48} />
+                         </div>
+                         <h3 className="text-2xl font-black">Seat Reserved!</h3>
+                         <p className="text-muted-foreground font-medium italic">We have received your request. Our team will contact you on WhatsApp shortly.</p>
+                         <Button variant="outline" onClick={() => setSuccess(false)} className="mt-4">Register Another</Button>
+                       </div>
+                     ) : (
+                       <form onSubmit={handleSubmit} className="space-y-6">
+                          <div className="space-y-2">
+                             <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Full Name</label>
+                             <div className="relative">
+                                <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
+                                <input 
+                                  required
+                                  type="text" 
+                                  placeholder="Your Name" 
+                                  value={formData.name}
+                                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                                  className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" 
+                                />
+                             </div>
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                             <div className="space-y-2">
+                                <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Phone Number</label>
+                                <div className="relative">
+                                   <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
+                                   <input 
+                                     required
+                                     type="tel" 
+                                     placeholder="+91" 
+                                     value={formData.phone}
+                                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                                     className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all" 
+                                   />
+                                </div>
+                             </div>
+                             <div className="space-y-2">
+                                <label className="text-[10px] font-black tracking-widest text-muted-foreground ml-1">Interested In</label>
+                                <div className="relative">
+                                   <GraduationCap size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
+                                   <select 
+                                     value={formData.course}
+                                     onChange={(e) => setFormData({...formData, course: e.target.value})}
+                                     className="w-full bg-muted/50 border-none rounded-xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/20 outline-none transition-all appearance-none h-14"
+                                   >
+                                      <option value="SEO">SEO</option>
+                                      <option value="Social Media">Social Media</option>
+                                      <option value="Google Ads">Google Ads</option>
+                                      <option value="Full Masterclass">Full Masterclass</option>
+                                   </select>
+                                </div>
+                             </div>
+                          </div>
+                          <Button 
+                            disabled={loading}
+                            type="submit" 
+                            size="lg" 
+                            className="w-full py-8 text-xl font-black tracking-widest rounded-xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30 active:scale-[0.98] transition-all mt-4"
+                          >
+                             {loading ? <Loader2 className="animate-spin" size={24} /> : (
+                               <>
+                                 Get Invite Link
+                                 <ChevronRight size={24} className="ml-2" />
+                               </>
+                             )}
+                          </Button>
+                          <p className="text-[10px] text-center text-muted-foreground font-medium italic">We'll send the demo schedule via WhatsApp within 2 hours.</p>
+                       </form>
+                     )}
                   </div>
                </FadeIn>
             </div>

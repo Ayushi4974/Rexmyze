@@ -45,10 +45,10 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <nav className="w-full border-b border-border bg-white/95 backdrop-blur-md">
-        <div className="w-full flex h-24 items-center justify-between px-4 sm:px-6 lg:px-6">
+        <div className="w-full flex h-28 items-center justify-between px-4 sm:px-6 lg:px-6">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center group">
-               <div className="relative h-16 w-48 sm:h-20 sm:w-64">
+               <div className="relative h-20 w-60 sm:h-24 sm:w-80">
                  <Image 
                    src="/logo-academy.png" 
                    alt="Rexmyze Academy Logo" 
