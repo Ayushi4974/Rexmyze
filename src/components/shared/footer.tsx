@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -50,16 +51,47 @@ export default function Footer() {
 
           <div className="flex flex-col space-y-4 order-4 md:order-4 col-span-2 md:col-span-1">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Contact Us</h3>
-            <div className="space-y-3">
-              <a href="mailto:info@rexmyze.com" className="text-sm text-muted-foreground hover:text-primary transition-colors block">
-                info@rexmyze.com
-              </a>
-              <a href="tel:7096181126" className="text-sm text-muted-foreground hover:text-primary transition-colors block">
-                7096181126
-              </a>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                8th Floor , B112, Sarover Complex, opposite Samruddhi Apartment, Vasant Vihar, Navrangpura, Ahmedabad, Gujarat 380009
-              </p>
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <a href="mailto:info@rexmyze.com" className="group flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-all">
+                  <div className="p-1.5 rounded-md bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                    <Mail size={14} />
+                  </div>
+                  info@rexmyze.com
+                </a>
+                <a href="tel:7096181126" className="group flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-all">
+                  <div className="p-1.5 rounded-md bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                    <Phone size={14} />
+                  </div>
+                  7096181126
+                </a>
+              </div>
+
+              <div className="space-y-4">
+                <div className="group flex items-start gap-3">
+                  <div className="p-1.5 rounded-md bg-primary/5 text-primary mt-0.5 group-hover:bg-primary group-hover:text-white transition-all">
+                    <MapPin size={14} />
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Navrangpura Center</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      8th Floor, B112, Sarover Complex, opposite Samruddhi Apartment, Vasant Vihar, Navrangpura, Ahmedabad, Gujarat 380009
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="group flex items-start gap-3 pt-4 border-t border-border/10">
+                  <div className="p-1.5 rounded-md bg-primary/5 text-primary mt-0.5 group-hover:bg-primary group-hover:text-white transition-all">
+                    <MapPin size={14} />
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Maninagar Branch</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      2, Prem Sagar Apartments, Opp Chavla Park, Bhairavnath Char Rasta, Maninagar, Ahmedabad – 380008
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
