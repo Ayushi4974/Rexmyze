@@ -33,7 +33,7 @@ export default function WhyChooseUsPage() {
     },
     {
       title: "Small Batch Sizes",
-      description: "With only 15 students per batch, we ensure personalized attention and focused learning for every individual.",
+      description: "With only 20 students per batch, we ensure personalized attention and focused learning for every individual.",
       icon: Target,
       color: "bg-rose-500",
     },
