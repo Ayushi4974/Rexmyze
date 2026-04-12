@@ -28,7 +28,7 @@ export default function Hero() {
           {/* Hero Content */}
           <div className="lg:col-span-7 flex flex-col items-start pt-10">
             <FadeIn direction="up">
-              <div className="flex flex-wrap items-center gap-4 text-primary font-bold text-xs uppercase tracking-tighter mb-6">
+              <div className="flex flex-wrap items-center gap-4 text-primary font-black text-sm sm:text-base uppercase tracking-widest mb-6">
                 Ahmedabad's AI-Based Digital Marketing Academy
               </div>
 
@@ -92,7 +92,7 @@ export default function Hero() {
           {stats.map((stat, i) => (
             <StaggerItem key={i} className={`flex flex-col items-center justify-center py-6 sm:py-10 px-4 group hover:bg-muted/50 transition-colors border-b border-r border-border ${i % 2 !== 0 ? 'border-r-0' : ''} sm:border-b-0 sm:border-r last:border-b-0 lg:border-r border-border`}>
               <span className="text-xl sm:text-2xl lg:text-3xl font-black text-foreground group-hover:text-primary transition-colors mb-1 sm:mb-2 whitespace-nowrap">{stat.value}</span>
-              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-muted-foreground text-center line-clamp-1">{stat.label}</span>
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-muted-foreground text-center line-clamp-1">{stat.label}</span>
             </StaggerItem>
           ))}
         </StaggerContainer>

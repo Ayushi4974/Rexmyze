@@ -51,7 +51,7 @@ export default function SEOService() {
                   6+ Years of Search Excellence
                 </span>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground mb-10">
-                  SEO Service in <br />
+                  SEO in <br />
                   <span className="bg-[#54A0D6] text-white px-4 py-1 inline-block mt-2">Ahmedabad</span>
                 </h1>
                 <div className="border-l-4 border-[#54A0D6] pl-6 mb-12">
@@ -60,7 +60,7 @@ export default function SEOService() {
                    </p>
                 </div>
                 <p className="text-muted-foreground mb-10 text-base leading-relaxed">
-                  Rexmyze helps businesses improve their visibility through practical and structured SEO services 
+                  Rexmyze helps businesses improve their visibility through practical and structured SEO 
                   that build strong foundations rather than chasing shortcuts.
                 </p>
                 <Button size="lg" className="rounded-xl px-10 py-8 text-lg font-black uppercase tracking-widest bg-[#54A0D6] hover:bg-[#54A0D6]/90 shadow-xl shadow-[#54A0D6]/20">

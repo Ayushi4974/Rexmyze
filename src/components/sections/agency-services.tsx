@@ -20,7 +20,7 @@ export default function AgencyServices() {
   const services = [
     { title: "Web Development", href: "/services/web-development", icon: Code2 },
     { title: "Performance Marketing", href: "/services/performance-marketing", icon: TrendingUp },
-    { title: "SEO Service", href: "/services/seo", icon: Search },
+    { title: "SEO", href: "/services/seo", icon: Search },
     { title: "Google Ads", href: "/services/google-ads", icon: MousePointer2 },
     { title: "E-commerce SEO", href: "/services/ecommerce-seo", icon: ShoppingBag },
     { title: "Social Media", href: "/services/social-media-marketing", icon: Share2 },
