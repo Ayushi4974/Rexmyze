@@ -45,17 +45,17 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <nav className="w-full border-b border-border bg-white/95 backdrop-blur-md">
-        <div className="w-full flex h-32 items-center justify-between px-4 sm:px-6 lg:px-6">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center group">
-               <div className="relative h-24 w-72 sm:h-28 sm:w-[400px]">
-                 <Image 
-                   src="/logo-academy.png" 
-                   alt="Rexmyze Academy Logo" 
-                   fill 
-                   className="object-contain"
-                   priority
-                 />
+        <div className="w-full flex h-28 sm:h-32 items-center justify-between px-4 sm:px-6 lg:px-6">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+               <div className="relative h-22 w-80 sm:h-28 sm:w-[400px]">
+                  <Image 
+                    src="/logo-academy.png" 
+                    alt="Rexmyze Academy Logo" 
+                    fill 
+                    className="object-contain object-left"
+                    priority
+                  />
                </div>
             </Link>
           </div>

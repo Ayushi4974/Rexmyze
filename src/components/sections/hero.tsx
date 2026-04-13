@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Play, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import FadeIn from "@/components/ui/fade-in";
 import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 
@@ -38,16 +39,18 @@ export default function Hero() {
               </h1>
 
               <p className="text-muted-foreground text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl leading-relaxed font-medium">
-                Transform your career with hands-on Digital Marketing Course in Ahmedabad at Rexmyze Academy. 
-                Led by experts with 5+ years of experience, we offer SEO-friendly training focused on 
+                Transform your career with hands-on Digital Marketing Course in Ahmedabad at Rexmyze Academy.
+                Led by experts with 5+ years of experience, we offer SEO-friendly training focused on
                 real-world skills like SEO, Google Ads, Meta Ads, and lead generation through live projects.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8 sm:mb-12 w-full sm:w-auto">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-lg px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg font-bold w-full sm:w-auto">
-                  Apply Now
-                  <ChevronRight size={20} className="ml-2" />
-                </Button>
+                <Link href="/book-demo" className="w-full sm:w-auto">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-lg px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg font-bold w-full sm:w-auto transition-transform active:scale-95">
+                    Get Demo
+                    <ChevronRight size={20} className="ml-2" />
+                  </Button>
+                </Link>
               </div>
 
               <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-3 font-black text-[10px] sm:text-[11px] uppercase tracking-wider text-foreground/80 mb-8 sm:mb-12">

@@ -28,7 +28,7 @@ export default function CourseCard({
           src={image}
           alt={title}
           fill
-          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+          className="object-cover transition-all duration-500 group-hover:scale-110"
         />
         <div className="absolute top-0 left-0 bg-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-2">
           {category}

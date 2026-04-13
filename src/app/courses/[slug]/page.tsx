@@ -75,9 +75,11 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
               
               <div className="flex flex-col sm:flex-row gap-4">
                  <Button size="lg" className="px-10">Enroll Now</Button>
-                 <Button variant="outline" size="lg" className="border-zinc-700 text-zinc-300 hover:bg-zinc-800">
-                   Download Brochure
-                 </Button>
+                 <a href="/rexmyze-brochure.pdf" target="_blank" className="inline-block">
+                   <Button variant="outline" size="lg" className="border-zinc-700 text-zinc-300 hover:bg-zinc-800 w-full sm:w-auto">
+                     Download Brochure
+                   </Button>
+                 </a>
               </div>
             </div>
             

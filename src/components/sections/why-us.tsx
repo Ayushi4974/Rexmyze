@@ -1,4 +1,4 @@
-import { CheckCircle2, ShieldCheck, Heart, Users, Briefcase, GraduationCap } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Heart, Users, Briefcase, GraduationCap, Sparkles } from "lucide-react";
 import FadeIn from "@/components/ui/fade-in";
 import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 
@@ -24,6 +24,11 @@ export default function WhyChooseUs() {
       description: "Ideal for students, job seekers, and freelancers.",
       icon: Briefcase,
     },
+    {
+      title: "Personality Development",
+      description: "Soft skills training to help you excel in interviews and professional life.",
+      icon: Sparkles,
+    },
   ];
 
   return (
@@ -32,7 +37,7 @@ export default function WhyChooseUs() {
         <FadeIn direction="up">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              Why Choose the <span className="text-primary italic">Best Digital Marketing Institute</span> in Ahmedabad?
+              Why choose <span className="text-primary italic">Rexmyze digital marketing course</span> in Ahmedabad?
             </h2>
             <p className="text-lg text-muted-foreground">
               We don't just teach digital marketing; we build careers. Here's why students 

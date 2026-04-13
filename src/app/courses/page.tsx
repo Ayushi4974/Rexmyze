@@ -17,7 +17,7 @@ export default function CoursesPage() {
     {
       title: "SEO Masterclass",
       description: "Deep dive into Search Engine Optimization with live project experience.",
-      image: "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop",
       duration: "2 Months",
       modules: "12",
       slug: "seo-masterclass",
@@ -35,7 +35,7 @@ export default function CoursesPage() {
     {
       title: "Social Media Marketing",
       description: "Learn how to build brands on Instagram, Facebook, LinkedIn, and more.",
-      image: "https://images.unsplash.com/photo-1611162617474-1a21e9a182cd?q=80&w=1000&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1000&auto=format&fit=crop",
       duration: "2 Months",
       modules: "15",
       slug: "social-media",

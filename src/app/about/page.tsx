@@ -1,5 +1,5 @@
 import AboutHero from "@/components/sections/about-hero";
-import { Award, Heart, MessageSquare, Target, Users } from "lucide-react";
+import { Award, Eye, Heart, MessageSquare, Target, Users } from "lucide-react";
 import FadeIn from "@/components/ui/fade-in";
 import { StaggerContainer, StaggerItem } from "@/components/ui/stagger";
 
@@ -59,8 +59,8 @@ export default function AboutPage() {
               </FadeIn>
               <FadeIn direction="right">
                 <div className="bg-background text-foreground p-8 sm:p-12 rounded-3xl sm:rounded-none sm:rounded-l-3xl shadow-2xl border-r-8 sm:border-r-12 border-r-primary hover:-translate-x-2 transition-all">
-                   <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-white flex items-center justify-center text-primary mb-6 sm:mb-8">
-                      <Heart className="size-6 sm:size-7" />
+                   <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-primary flex items-center justify-center text-white mb-6 sm:mb-8">
+                      <Eye className="size-6 sm:size-7" />
                    </div>
                    <h2 className="text-2xl sm:text-3xl font-black mb-4 sm:mb-6 tracking-tight">Our <span className="text-primary italic underline underline-offset-8">Vision</span></h2>
                    <p className="opacity-80 text-base sm:text-lg leading-relaxed font-medium italic">
