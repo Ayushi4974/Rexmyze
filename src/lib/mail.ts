@@ -66,7 +66,7 @@ export const sendLeadEmail = async (data: any) => {
           <!-- Footer/CTA Area -->
           <div style="margin-top: 50px; text-align: center; border-top: 2px solid #f8fafc; padding-top: 40px;">
              <div style="margin-bottom: 25px;">
-                <a href="https://rexmyze.vercel.app/admin" style="background-color: #5192CC; color: #ffffff; padding: 20px 45px; text-decoration: none; border-radius: 20px; font-weight: 900; font-size: 18px; display: inline-block; box-shadow: 0 10px 25px rgba(81, 146, 204, 0.4); text-transform: uppercase; letter-spacing: 1px;">
+                <a href="https://rexmyze-admin.vercel.app" style="background-color: #5192CC; color: #ffffff; padding: 20px 45px; text-decoration: none; border-radius: 20px; font-weight: 900; font-size: 18px; display: inline-block; box-shadow: 0 10px 25px rgba(81, 146, 204, 0.4); text-transform: uppercase; letter-spacing: 1px;">
                    Open Admin Panel
                 </a>
              </div>
