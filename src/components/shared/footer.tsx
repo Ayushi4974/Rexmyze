@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -22,6 +22,14 @@ export default function Footer() {
               Empowering students, professionals, and business owners with
               practical training and 100% placement support.
             </p>
+            <div className="flex items-center gap-4 pt-2">
+              <a href="https://instagram.com/rexmyze" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
+                <Instagram size={18} />
+              </a>
+              <a href="https://facebook.com/rexmyze" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
+                <Facebook size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
