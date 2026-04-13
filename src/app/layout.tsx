@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/navbar";
 import Footer from "@/components/shared/footer";
 import StickyInquiry from "@/components/shared/sticky-inquiry";
+import WhatsAppButton from "@/components/shared/whatsapp-button";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Navbar />
         <StickyInquiry />
+        <WhatsAppButton />
         <main className="grow">
           {children}
         </main>
