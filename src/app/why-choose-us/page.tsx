@@ -184,7 +184,7 @@ export default function WhyChooseUsPage() {
                    <Image src="/images/founder.png" alt="Founder" fill className="object-cover" />
                 </div>
                <div className="text-left">
-                  <p className="font-bold tracking-widest text-xs">Aman Vazirani</p>
+                  <p className="font-bold tracking-widest text-xs">Irfan Khan</p>
                   <p className="text-[10px] text-white/70 font-medium whitespace-nowrap">Founder & CEO, Rexmyze Academy</p>
                </div>
             </div>
